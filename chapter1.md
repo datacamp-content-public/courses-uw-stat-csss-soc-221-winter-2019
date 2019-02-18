@@ -339,7 +339,8 @@ table(cdc$genhlth, cdc$gender)
 
 `@sct`
 ```{r}
-ex() %>% check_function("table") %>% check_result() %>% check_equal()
+ex() %>% check_function("table", 1) %>% check_arg(., ...) %>% check_equal()
+ex() %>% check_function("table", 2) %>% check_arg(., ... ) %>% check_equal()
 success_msg("Well done!")
 ```
 
