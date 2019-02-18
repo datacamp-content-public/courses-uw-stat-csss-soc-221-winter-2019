@@ -139,7 +139,10 @@ head(cdc)
 
 `@sct`
 ```{r}
-
+ex() %>% check_output_expr("names(cdc)")
+ex() %>% check_output_expr("nrow(cdc)")
+ex() %>% check_output_expr("head(cdc)")
+success_msg("Well done!")
 ```
 
 ---
