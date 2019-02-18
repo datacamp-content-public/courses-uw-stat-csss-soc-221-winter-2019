@@ -486,3 +486,49 @@ ex() %>% check_output_expr("mean_desired_weight")
 ex() %>% check_output_expr("mean_actual_weight - mean_desired_weight")
 success_msg("Great! Now you know about how to assign a value to named object so you can use it again!")
 ```
+
+---
+
+## R skills: Doing math in the console
+
+```yaml
+type: NormalExercise
+key: 2ab94a4669
+xp: 100
+```
+
+You can do many different simple and complex mathematical operations in R.
+
+In the last exercise, you saw an example of this, when you calculated the difference between the mean actual and desired weights.  It will be useful in future lab exercises to do calculations with saved objects.  
+
+In this exercise, we will step through the mathematical operations to calculate the z-score of the weight of an individual who weighs 120 lbs.
+
+`@instructions`
+Calculate the mean and standard deviation of the actual weight, using the `mean()` and `sd()` functions and save them to objects named `weight_mean` and `weight_sd`.
+
+Calculate the z-score for a weight of 120 and save it to an object called `zscore120`.
+
+Print the z-score.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+
+```
+
+`@sct`
+```{r}
+
+```
