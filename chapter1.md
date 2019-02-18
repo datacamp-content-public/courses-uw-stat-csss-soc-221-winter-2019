@@ -168,7 +168,7 @@ Enter `names(cdc)` in the console and count the number of variables.
 
 `@pre_exercise_code`
 ```{r}
-View("http://www.openintro.org/stat/data/cdc.R")
+source("http://www.openintro.org/stat/data/cdc.R")
 ```
 
 `@sct`
