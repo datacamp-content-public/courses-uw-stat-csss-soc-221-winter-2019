@@ -356,30 +356,49 @@ key: c75ec5f8ee
 xp: 100
 ```
 
+Finally, let's explore how to make a plot of variables in our data.
 
+First, we'll make a boxplot of of the ages of our surey respondents.
+
+Next, we'll make a scatterplot of people's height and weight, using the `plot()` command.  By default `plot` creates dot or scatter plots.
 
 `@instructions`
+Enter `cdc$genhlth` as the input to the `barplot` command and examine the plot that is generated.
 
+Enter `cdc$height` and `cdc$weight` as the 'x' and 'y' inputs to the `plot` command to draw a scatterplot of these two variables.
 
 `@hint`
-
+Fill in the appropriate variables as defined in the instructions inside the parentheses of each function.  Make sure to included the `cdc$` before the column name.
 
 `@pre_exercise_code`
 ```{r}
-
+source("http://www.openintro.org/stat/data/cdc.R")
 ```
 
 `@sample_code`
 ```{r}
+# Make a barplot of general health
+boxplot(cdc$___)
 
+# Make a scatterplot of with height as the explanatory variable and weight as the response variable.
+plot(x = cdc$height, y = ___)
 ```
 
 `@solution`
 ```{r}
+# Make a boxplot of respondent's ages
+boxplot(cdc$age)
 
+# Make a scatterplot of with height as the explanatory variable and weight as the response variable.
+plot(x = cdc$height, y = cdc$weight)
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_function("boxplot") %>% check_args(., "formula") %>% check_equal()
+ex() %>% check_function("plot") %>% {
+  check_arg(., "x") %>% check_equal()
+  check_arg(., "y") %>% check_equal()
+}
+success_msg("Nice job! It is easy to make many different kinds of plots in R quickly with other similar commands.")
 ```
