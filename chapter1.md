@@ -339,8 +339,11 @@ table(cdc$genhlth, cdc$gender)
 
 `@sct`
 ```{r}
-ex() %>% check_function("table", 1) %>% check_arg(., ...) %>% check_equal()
-ex() %>% check_function("table", 2) %>% check_arg(., ... ) %>% check_equal()
+ex() %>% check_code("table(cdc$genhlth)",) 
+ex() %>% check_code(c("table(cdc$genhlth, cdc$gender)",
+                     "table(cdc$genhlth,cdc$gender)",
+                     "table(cdc$gender, cdc$genhlth)",
+                     "table(cdc$gender,cdc$genhlth)") 
 success_msg("Well done!")
 ```
 
