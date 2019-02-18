@@ -245,3 +245,35 @@ sd(cdc$weight)
 ```{r}
 
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise
+key: 625b9abab3
+xp: 50
+```
+
+Which variable has greater variability, actual weight (`cdc$weight`) or desired weight (`cdc$wtdesire`)?  
+
+The dataset `cdc` is loaded in the console. You can use the `sd()` or `summary()` commands you just practiced to remind yourself which variable has greater spread.
+
+`@possible_answers`
+- [Actual weight has more variability.]
+- Desired weight has more variability.
+- Actual and desired weight have the same variability.
+
+`@hint`
+Enter `sd(cdc$weight)` and `sd(cdc$wtdesire)` to calculate the standard deviations of each variable.
+
+`@pre_exercise_code`
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+`@sct`
+```{r}
+
+```
