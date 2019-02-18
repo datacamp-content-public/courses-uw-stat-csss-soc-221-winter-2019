@@ -92,10 +92,6 @@ row representing a *case* and each column representing a *variable*.  R calls
 this data format a *data frame*, which is a term that will be used throughout 
 the labs.
 
-
-
-	
-
 `@instructions`
 View the names of the variables by entering the command `names(cdc)`.
 
@@ -199,7 +195,6 @@ The `summary()` function prints summary information for all variables in your da
 Alternatively, you can use the functions `mean()`, `sd()`, and `median()` to calculate the mean, standard deviation, and median of individual variables. 
 
 We use the `$` to name the variable we want from the data set. For example, `mean(cdc$height)` will calculate the mean of the `height` variable in the `cdc` data set.
-
 
 `@instructions`
 Print the summary statistics for all variables in the cdc dataset, which is loaded and available in the console already with the `summary` function.
@@ -421,7 +416,7 @@ In R, we can save values by "assigning" them to a name, that we can then refer t
 
 To assign a value to a name, we use to "assignment operator": `<-`.  The name we want to save goes on the left side, the function output, value, or variable that we want to save with that name goes on the right.
 
-In this exercise you will practice saving summary statistics and individual variables and then using them in later code. 
+In this exercise you will practice saving summary statistics and individual variables and then using them in later code.
 
 `@instructions`
 Calculate the mean actual weight and desired weight of the CDC survey respondents.  Remember the variable names are `weight` and `wtdesire`.
