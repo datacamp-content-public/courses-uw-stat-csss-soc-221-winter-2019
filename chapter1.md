@@ -175,7 +175,7 @@ View("http://www.openintro.org/stat/data/cdc.R")
 
 ---
 
-## Printing summary statistics
+## Exploring data: numerical summaries
 
 ```yaml
 type: NormalExercise
@@ -248,7 +248,7 @@ sd(cdc$weight)
 
 ---
 
-## Insert exercise title here
+## Checkpoint: summary statistics
 
 ```yaml
 type: MultipleChoiceExercise
@@ -271,6 +271,94 @@ Enter `sd(cdc$weight)` and `sd(cdc$wtdesire)` to calculate the standard deviatio
 `@pre_exercise_code`
 ```{r}
 source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+`@sct`
+```{r}
+
+```
+
+---
+
+## Exploring data: contingency tables
+
+```yaml
+type: NormalExercise
+key: 5782a02399
+xp: 100
+```
+
+We can easily make a _frequency table_ for categorical variables in R, using the `table()` command.  For example, to create a frequency table of the male and female respondents in this survey we would enter `table(cdc$gender)`.
+
+If we want to make a _contingency table_, comparing two categorical variables, we include two variables in the `table()` function, separated by a comma.  For example, `table(cdc$gender, cdc$exerany)` would create a contingency table of gender and whether respondents exercise (the variable exerany).
+
+`@instructions`
+Report how many respondents reported each of five levels of health, by creating a table of the `genhlth` variable.
+
+Next, create a contingency table of general health and gender by including both variables in the `table()` function.
+
+`@hint`
+Replace the underscores with the variable name "genhlth" and the command "table".
+
+`@pre_exercise_code`
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+`@sample_code`
+```{r}
+# Print a table of the genhlth variable
+table(cdc$___)
+
+# Print a contingency table of genhlth and gender
+___(cdc$genhlth, cdc$gender)
+```
+
+`@solution`
+```{r}
+# Print a table of the genhlth variable
+table(cdc$genhlth)
+
+# Print a contingency table of genhlth and gender
+table(cdc$genhlth)
+```
+
+`@sct`
+```{r}
+
+```
+
+---
+
+## Exploring data with graphs
+
+```yaml
+type: NormalExercise
+key: c75ec5f8ee
+xp: 100
+```
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+
 ```
 
 `@sct`
