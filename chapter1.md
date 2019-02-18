@@ -339,11 +339,10 @@ table(cdc$genhlth, cdc$gender)
 
 `@sct`
 ```{r}
-ex() %>% check_code("table(cdc$genhlth)",) 
+ex() %>% check_code("table(cdc$genhlth)", fixed = TRUE) 
 ex() %>% check_code(c("table(cdc$genhlth, cdc$gender)",
-                     "table(cdc$genhlth,cdc$gender)",
-                     "table(cdc$gender, cdc$genhlth)",
-                     "table(cdc$gender,cdc$genhlth)") 
+                     "table(cdc$gender, cdc$genhlth)"), fixed = TRUE,
+                   missing_msg = "It looks like you haven't included a table command including both `cdc$genhlth` and `cdc$gender`.") 
 success_msg("Well done!")
 ```
 
