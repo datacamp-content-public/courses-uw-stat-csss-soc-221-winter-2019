@@ -325,7 +325,8 @@ table(cdc$genhlth)
 
 `@sct`
 ```{r}
-check_correct()
+ex() %>% check_success() %>%
+success_msg("Well done!")
 ```
 
 ---
