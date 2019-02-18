@@ -325,7 +325,7 @@ table(cdc$genhlth)
 
 `@sct`
 ```{r}
-checkOutput(), success_message("Well done!")
+check_correct()
 ```
 
 ---
