@@ -173,7 +173,11 @@ View("http://www.openintro.org/stat/data/cdc.R")
 
 `@sct`
 ```{r}
-
+msg1 <- "Not quite, give it another shot."
+msg2 <- "Nope, try again!"
+msg3 <- "Good choice"
+msg4 <- "Not that one, variables are columns, not rows!"
+ex() %>% check_mc(1, feedback_msgs = c(msg1, msg2, msg3))
 ```
 
 ---
