@@ -187,18 +187,22 @@ It is simple in R to get a five number summary (min, max, median, IQR) and mean 
 
 The `summary()` function prints summary information for all variables in your data set.
 
-Alternatively, you can use the functions `mean()`, `sd()`, and `median()` to calculate the mean, standard deviation, and median of individual variables.  We use the `$` to name the variable we want from the data set. For example, `mean(cdc$height)` will calculate the mean of the `height` variable in the `cdc` data set.
+Alternatively, you can use the functions `mean()`, `sd()`, and `median()` to calculate the mean, standard deviation, and median of individual variables. 
+
+We use the `$` to name the variable we want from the data set. For example, `mean(cdc$height)` will calculate the mean of the `height` variable in the `cdc` data set.
 
 
 `@instructions`
 Print the summary statistics for all variables in the cdc dataset, which is loaded and available in the console already with the `summary` function.
 
-Calculate the mean actual weight (`weight`) and desired weight (`wtdesire`).
+Calculate the mean actual weight (`cdc$weight`) and desired weight (`cdc$wtdesire`).
 
 Calculate the standard deviation of actual weight and desired weight.
 
 `@hint`
+Replace the underscores before parenthesis with the name of the statistical function you want to calculate.  
 
+Replace the underscores after the $ with the name of the variable.
 
 `@pre_exercise_code`
 ```{r}
