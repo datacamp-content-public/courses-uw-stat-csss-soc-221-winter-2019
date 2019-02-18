@@ -509,7 +509,7 @@ Print the z-score.
 `@hint`
 Make sure to use the `cdc$weight` variable in the `mean()` and `sd()` functions.  
 
-Remember that to calculate the z-score you have to divide by the standard deviation, which you should have saved as an object called `sd_weight`
+Remember that to calculate the z-score you have to divide by the standard deviation, which you should have saved as an object called `sd_weight`.
 
 `@pre_exercise_code`
 ```{r}
