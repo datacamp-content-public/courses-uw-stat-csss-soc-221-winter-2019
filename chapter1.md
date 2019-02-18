@@ -3,7 +3,7 @@ title: 'Lab 1: Orientation to DataCamp'
 description: "This is an orientation to labs for STAT/CSSS/SOC 221.    The purpose of these 'labs' is to provide a brief introduction to doing statistics in the kind of computing framework in which most data scientists work today.\n\nThe labs will be completed in the R programming language, using DataCamp's online learning interface.  They feature step-by-step exercises designed to demonstrate the power of computing for data analysis, while giving you the opportunity to practice applying concepts of statistical inference with real data.\n\nThis short 'chapter' will provide an orientation to the data camp learning environment, and demonstrate loading a data set into R and generating basic summary statistics and plots from that data set."
 ---
 
-## Example coding exercise
+## Welcome to DataCamp
 
 ```yaml
 type: NormalExercise
@@ -12,8 +12,6 @@ lang: r
 xp: 100
 skills: 1
 ```
-
-# Welcome! 
 
 Welcome to the DataCamp interface! 
 
@@ -70,6 +68,104 @@ plot(cars, type = "o", col = "blue")
 
 # A plot
 plot(cars, type = "o", col = "blue")
+```
+
+`@sct`
+```{r}
+
+```
+
+---
+
+## Examining Data
+
+```yaml
+type: NormalExercise
+key: bd32a0e106
+xp: 100
+```
+
+For this exercise, we will use data from The Behavioral Risk Factor Surveillance System (BRFSS).  This is an annual telephone survey of 350,000 people in the United States that is designed to identify emerging health trends. For example, respondents are asked about their diet and weekly physical activity, their HIV/AIDS status, possible tobacco use, and even their level of healthcare coverage.  We will focus on a random sample of 20,000 people from the BRFSS survey conducted in 2000. This dataset is already loaded into memory and is called `cdc`.
+
+The data set `cdc` that shows up in your workspace is a *data matrix*, with each
+row representing a *case* and each column representing a *variable*.  R calls 
+this data format a *data frame*, which is a term that will be used throughout 
+the labs.
+
+
+
+	
+
+`@instructions`
+View the names of the variables by entering the command `names(cdc)`.
+
+View the number of observations (number of rows) by entering the commands `nrow(cdc)`.
+
+View the first few rows of the data set with the command `head(cdc)`.
+
+`@hint`
+Replace the underscores in `nrow(___)` and `head(___)` with the letters `cdc` to create the code `head(cdc)`.
+
+`@pre_exercise_code`
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+`@sample_code`
+```{r}
+# Print the names of the variables
+names(cdc)
+
+# Print the number of observations (rows)
+nrow(___)
+
+# Print the top few rows
+head(___)
+
+```
+
+`@solution`
+```{r}
+# Print the names of the variables
+names(cdc)
+
+# Print the number of observations (rows)
+nrow(cdc)
+
+# Print the top few rows
+head(cdc)
+
+```
+
+`@sct`
+```{r}
+
+```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise
+key: 646bdbbb14
+xp: 50
+```
+
+How many variables are in the `cdc` data set?  The 	`cdc` data set is loaded in the R console to the right, so you can check again to remind yourself using the `names(cdc)` command.
+
+`@possible_answers`
+3 variables
+5 variables
+[9 variables]
+20000 variables
+
+`@hint`
+Enter `names(cdc)` in the console and count the number of variables.
+
+`@pre_exercise_code`
+```{r}
+View("http://www.openintro.org/stat/data/cdc.R")
 ```
 
 `@sct`
