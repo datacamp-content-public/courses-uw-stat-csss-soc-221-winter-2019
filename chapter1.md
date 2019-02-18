@@ -516,7 +516,7 @@ source("http://www.openintro.org/stat/data/cdc.R")
 
 `@sample_code`
 ```{r}
-# The cdc datasetis already loaded into R
+# The cdc dataset is already loaded into R
 
 # Save the mean and standard deviations of actual weight as objects
 mean_weight <- mean(___)
@@ -549,6 +549,6 @@ zscore120
 ex() %>% check_object("mean_weight") %>% check_equal()
 ex() %>% check_object("sd_weight") %>% check_equal()
 ex() %>% check_object("zscore120") %>%check_equal()
-ex() %>% check_output_expr("zscore")
+ex() %>% check_output_expr("zscore120")
 success_msg("Well done! Now you have some basic familiarity with R data operations that you can use to practice other statistical tasks.")
 ```
