@@ -72,7 +72,7 @@ plot(cars, type = "o", col = "blue")
 
 `@sct`
 ```{r}
-
+ex() %>% check_correct() %>% success_msf("Great! Now let's get started")
 ```
 
 ---
