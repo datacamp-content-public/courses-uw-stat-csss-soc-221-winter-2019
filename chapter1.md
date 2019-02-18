@@ -404,3 +404,85 @@ ex() %>% check_function("plot") %>% {
 }
 success_msg("Nice job! It is easy to make many different kinds of plots in R quickly with other similar commands.")
 ```
+
+---
+
+## Saving data and values in R
+
+```yaml
+type: NormalExercise
+key: 062d688720
+xp: 100
+```
+
+Often when doing an analysis you want to save certain variables or calculated values so that you can use them again.
+
+In R, we can save values by "assigning" them to a name, that we can then refer to later (like how we typed `cdc` when we wanted to access the cdc dataset).  
+
+To assign a value to a name, we use to "assignment operator": `<-`.  The name we want to save goes on the left side, the function output, value, or variable that we want to save with that name goes on the right.
+
+In this exercise you will practice saving summary statistics and individual variables and then using them in later code. 
+
+`@instructions`
+Calculate the mean actual weight and desired weight of the CDC survey respondents.  Remember the variable names are `weight` and `wtdesire`.
+
+Save the two means to two 'objects' (what we call items that we've saved in our R console) called `mean_actual_weight` and `mean_desired_weight`.
+
+Print each of the means using the `print()` function
+
+Calculate the difference between the two means.
+
+`@hint`
+In the `mean()` function you should specify the `wtdesire` variable in the `cdc` dataframe. Use the `$` to indicate the variable in the dataframe.  To print the value saved to a name, just put the name inside the parentheses of `print()`.
+
+`@pre_exercise_code`
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+`@sample_code`
+```{r}
+# The cdc dataframe is loaded in R.
+
+# Calculate and save the mean actual weight
+mean_actual_weight <- mean(cdc$weight)
+
+# Calculate and save the mean desired weight
+mean_desired_weight <- mean(___)
+
+# Print the mean actual weight
+print(mean_actual_weight)
+# Print the mean desired weight
+print(___)
+
+# Calculate the difference between the mean actual and desired weight
+mean_actual_weight - mean_desired_weight
+```
+
+`@solution`
+```{r}
+# The cdc dataframe is loaded in R.
+
+# Calculate and save the mean actual weight
+mean_actual_weight <- mean(cdc$weight)
+
+# Calculate and save the mean desired weight
+mean_desired_weight <- mean(cdc$wtdesire)
+
+# Print each mean value
+print(mean_actual_weight)
+print(mean_desired_weight)
+
+# Calculate the difference between the mean actual and desired weight
+mean_actual_weight - mean_desired_weight
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("mean_actual_weight") %>% check_equal()
+ex() %>% check_object("mean_desired_weight") %>% check_equal()
+ex() %>% check_output_expr("mean_actual_weight")
+ex() %>% check_output_expr("mean_desired_weight")
+ex() %>% check_output_expr("mean_actual_weight - mean_desired_weight")
+success_msg("Great! Now you know about how to assign a value to named object so you can use it again!")
+```
