@@ -169,3 +169,64 @@ View("http://www.openintro.org/stat/data/cdc.R")
 ```{r}
 
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: TabExercise
+key: 9c43131c8a
+xp: 100
+```
+
+
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: db99bebab6
+xp: 50
+```
+
+`@question`
+How many variables are in the `cdc` data set?  The 	`cdc` data set is loaded in the R console to the right, so you can check again to remind yourself using the `names(cdc)` command.
+
+`@possible_answers`
+
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: c92c9e7fb0
+xp: 50
+```
+
+`@question`
+
+
+`@possible_answers`
+
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
