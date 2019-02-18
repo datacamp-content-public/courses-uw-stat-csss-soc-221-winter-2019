@@ -178,6 +178,8 @@ msg2 <- "Nope, try again!"
 msg3 <- "Good choice"
 msg4 <- "Not that one, variables are columns, not rows!"
 ex() %>% check_mc(3, feedback_msgs = c(msg1, msg2, msg3))
+
+success_msg("Nice job!  Note you could also use the command ncol() to count the number of columns.")
 ```
 
 ---
