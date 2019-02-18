@@ -1,6 +1,7 @@
 ---
 title: 'Lab 1: Orientation to DataCamp'
 description: "This is an orientation to labs for STAT/CSSS/SOC 221.    The purpose of these 'labs' is to provide a brief introduction to doing statistics in the kind of computing framework in which most data scientists work today.\n\nThe labs will be completed in the R programming language, using DataCamp's online learning interface.  They feature step-by-step exercises designed to demonstrate the power of computing for data analysis, while giving you the opportunity to practice applying concepts of statistical inference with real data.\n\nThis short 'chapter' will provide an orientation to the data camp learning environment, and demonstrate loading a data set into R and generating basic summary statistics and plots from that data set."
+free_preview: true
 ---
 
 ## Welcome to DataCamp
