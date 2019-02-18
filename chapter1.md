@@ -403,7 +403,7 @@ success_msg("Nice job! It is easy to make many different kinds of plots in R qui
 
 ---
 
-## Saving data and values in R
+## R skills: Saving values as objects
 
 ```yaml
 type: NormalExercise
@@ -500,7 +500,7 @@ In the last exercise, you saw an example of this, when you calculated the differ
 In this exercise, we will step through the mathematical operations to calculate the z-score of the weight of an individual who weighs 120 lbs.
 
 `@instructions`
-Calculate the mean and standard deviation of the actual weight, using the `mean()` and `sd()` functions and save them to objects named `weight_mean` and `weight_sd`.
+Calculate the mean and standard deviation of the actual weight, using the `mean()` and `sd()` functions and save them to objects named `mean_weight` and `sd_weight`.
 
 Calculate the z-score for a weight of 120 and save it to an object called `zscore120`.
 
@@ -516,15 +516,39 @@ source("http://www.openintro.org/stat/data/cdc.R")
 
 `@sample_code`
 ```{r}
+# The cdc datasetis already loaded into R
 
+# Save the mean and standard deviations of actual weight as objects
+mean_weight <- mean(___)
+sd_weight <- ___(cdc$weight)
+
+# Calculate the z-score of 120 and save it as an object
+zscore120 <- (120 - mean_weight)/sd_weight
+
+# Print the z-score in the console
+print(___)
 ```
 
 `@solution`
 ```{r}
+# The cdc datasetis already loaded into R
 
+# Save the mean and standard deviations of actual weight as objects
+mean_weight <- mean(cdc$weight)
+sd_weight <- sd(cdc$weight)
+
+# Calculate the z-score of 120 and save it as an object
+zscore120 <- (120 - mean_weight)/sd_weight
+
+# View the z-score in the console
+zscore120
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_object("mean_weight") %>% check_equal()
+ex() %>% check_object("sd_weight") %>% check_equal()
+ex() %>% check_object("zscore120") %>%check_equal()
+ex() %>% check_output_expr("zscore")
+success_msg("Well done! Now you have some basic familiarity with R data operations that you can use to practice other statistical tasks.")
 ```
