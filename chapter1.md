@@ -378,7 +378,7 @@ source("http://www.openintro.org/stat/data/cdc.R")
 `@sample_code`
 ```{r}
 # Make a boxplot of respondent's ages
-boxplot(cdc$age)
+boxplot(cdc$___)
 
 # Make a scatterplot of with height as the explanatory variable and weight as the response variable.
 plot(x = cdc$height, y = ___)
