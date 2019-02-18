@@ -282,8 +282,8 @@ source("http://www.openintro.org/stat/data/cdc.R")
 
 `@sct`
 ```{r}
-msg1 <- "Not good, try again!"
-msg2 <- "Nice one!"
+msg1 <- "Nice one!"
+msg2 <- "Nope, try again!"
 msg3 <- "Not quite, give it another shot."
 ex() %>% check_mc(1, feedback_msgs = c(msg1, msg2, msg3))
 ```
