@@ -172,3 +172,72 @@ View("http://www.openintro.org/stat/data/cdc.R")
 ```{r}
 
 ```
+
+---
+
+## Printing summary statistics
+
+```yaml
+type: NormalExercise
+key: 8287eb6106
+xp: 100
+```
+
+It is simple in R to get a five number summary (min, max, median, IQR) and mean for all numeric variables in your data set (including binary variables coded as 0 or 1).
+
+The `summary()` function prints summary information for all variables in your data set.
+
+Alternatively, you can use the functions `mean()`, `sd()`, and `median()` to calculate the mean, standard deviation, and median of individual variables.  We use the `$` to name the variable we want from the data set. For example, `mean(cdc$height)` will calculate the mean of the `height` variable in the `cdc` data set.
+
+
+`@instructions`
+Print the summary statistics for all variables in the cdc dataset, which is loaded and available in the console already with the `summary` function.
+
+Calculate the mean actual weight (`weight`) and desired weight (`wtdesire`).
+
+Calculate the standard deviation of actual weight and desired weight.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+`@sample_code`
+```{r}
+# Print summary statistics for all variables
+summary(cdc)
+
+# Calculate mean of actual weight
+mean(cdc$weight)
+# Calculate mean of desired weight
+___(cdc$wtdesire)
+
+# Calculate standard deviation of actual weight
+sd(cdc$___)
+# Calc4ulate standard deviation of desired weight
+sd(cdc$___)
+```
+
+`@solution`
+```{r}
+# Print summary statistics for all variables
+summary(cdc)
+
+# Calculate mean of actual weight
+mean(cdc$weight)
+# Calculate mean of desired weight
+mean(cdc$wtdesire)
+
+# Calculate standard deviation of actual weight
+sd(cdc$weight)
+# Calc4ulate standard deviation of desired weight
+sd(cdc$weight)
+```
+
+`@sct`
+```{r}
+
+```
