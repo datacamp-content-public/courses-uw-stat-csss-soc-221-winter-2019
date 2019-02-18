@@ -334,12 +334,13 @@ ___(cdc$genhlth, cdc$gender)
 table(cdc$genhlth)
 
 # Print a contingency table of genhlth and gender
-table(cdc$genhlth)
+table(cdc$genhlth, cdc$gender)
 ```
 
 `@sct`
 ```{r}
-ex() %>% check_correct() %>%
+ex() %>% check_output_expr(table(cdc$genhlth))
+ex() %>% check_output_expr(table(cdc$genhlth, cdc$gender))
 success_msg("Well done!")
 ```
 
