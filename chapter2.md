@@ -78,27 +78,62 @@ In this lab we have access to the entire population, but this is rarely the case
 
 We can create random samples from the population all houses in Ames using the `sample()` function.  
 
-In this exercise, we will draw several samples of 50 houses in Ames and compare their estimated mean area.
+In this exercise, we will draw several samples of the living area of 50 houses in Ames and compare their estimated mean area.
 
 `@instructions`
+The ames dataset is already loaded.  Using the `sample()` function, draw three samples from the full population of houses' living areas in Ames.  
 
+Examine the mean living area estimate from each sample.  How variable are these estimates of the mean?
 
 `@hint`
 
 
 `@pre_exercise_code`
 ```{r}
-load("ames.RData")
+load(url("http://www.openintro.org/stat/data/ames.RData"))
 ```
 
 `@sample_code`
 ```{r}
+# The ames data set is already loaded.
+
+# Draw one sample
+sample1 <- sample(ames$Gr.Liv.Area, 50)
+# Print the mean living area in that sample
+mean(sample1)
+
+# Draw another sample
+sample2 <- sample(ames$Gr.Liv.Area, 50)
+# Print the mean living area in that sample
+mean(sample2)
+
+# Draw a third sample
+sample3 <- sample(___, __)
+# Print the mean living area in that sample
+mean(___)
 
 ```
 
 `@solution`
 ```{r}
-sample1 <- 
+# The ames data set is already loaded.
+
+# Draw one sample
+sample1 <- sample(ames$Gr.Liv.Area, 50)
+# Print the mean living area in that sample
+mean(sample1)
+
+# Draw another sample
+sample2 <- sample(ames$Gr.Liv.Area, 50)
+# Print the mean living area in that sample
+mean(sample2, 50)
+
+# Draw a third sample
+sample3 <- sample(ames$Gr.Liv.Area, 50)
+# Print the mean living area in that sample
+mean(sample3, 50)
+
+
 ```
 
 `@sct`
