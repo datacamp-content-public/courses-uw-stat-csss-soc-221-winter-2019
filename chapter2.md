@@ -487,26 +487,65 @@ key: 8f67b77e3f
 xp: 100
 ```
 
-As a last exercise to explore sampling distributions and confidence intervals, 
+As a last exercise to explore sampling distributions and confidence intervals, we will confirm that confidence intervals _do not always contain the population parameter_.
+
+We will do this by running code that loops over 50 samples of the living area (like we did for sampling distributions earlier).  Again, you do not need to modify this code, but you may want to look at it and figure out what it is doing.
+
+Once we have drawn our 50 samples, we will calculate the confidence interval around the mean for each sample and plot them.
 
 `@instructions`
+Run the loop code to draw 50 samples of 60 houses and save the 50 sample means and standard deviations.
 
+Calculate the upper and lower bounds of the confidence intervals for each sample, saving the collected upper and lower bounds in objects called `upper_bounds` and `lower_bounds`.
+
+Run the `plot_ci()` function to generate a plot of all the confidence intervals and a line showing the population mean.
 
 `@hint`
 
 
 `@pre_exercise_code`
 ```{r}
-
+load(url("http://www.openintro.org/stat/data/ames.RData"))
 ```
 
 `@sample_code`
 ```{r}
+# The ames dataframe is already loaded
 
+# Loop function to calculate the sample means and standard deviations for 50 samples of 60 houses each:
+samp_mean <- rep(NA, 50)
+samp_sd <- rep(NA, 50)
+for(i in 1:50){
+  samp <- sample(ames$Gr.Liv.Area, 60) # obtain a sample of size n = 60 from the population
+  samp_mean[i] <- mean(samp)    # save sample mean in ith element of samp_mean
+  samp_sd[i] <- sd(samp)        # save sample sd in ith element of samp_sd
+}
+
+# Construct 95% confidence intervals
+lower_vector <- samp_mean - 1.96 * samp_sd / sqrt(60) 
+upper_vector <- ___
+
+plot_ci(lower_vector, upper_vector, mean(population))
 ```
 
 `@solution`
 ```{r}
+# The ames dataframe is already loaded
+
+# Loop function to calculate the sample means and standard deviations for 50 samples of 60 houses each:
+samp_mean <- rep(NA, 50)
+samp_sd <- rep(NA, 50)
+for(i in 1:50){
+  samp <- sample(ames$Gr.Liv.Area, 60) # obtain a sample of size n = 60 from the population
+  samp_mean[i] <- mean(samp)    # save sample mean in ith element of samp_mean
+  samp_sd[i] <- sd(samp)        # save sample sd in ith element of samp_sd
+}
+
+# Construct 95% confidence intervals
+lower_vector <- samp_mean - 1.96 * samp_sd / sqrt(60) 
+upper_vector <- samp_mean + 1.96 * samp_sd / sqrt(60) 
+
+plot_ci(lower_vector, upper_vector, mean(population))
 
 ```
 
