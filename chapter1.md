@@ -105,7 +105,7 @@ Replace the underscores in `nrow(___)` and `head(___)` with the letters `cdc` to
 
 `@pre_exercise_code`
 ```{r}
-source("http://www.openintro.org/stat/data/cdc.R")
+load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
 ```
 
 `@sample_code`
