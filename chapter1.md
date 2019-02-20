@@ -86,7 +86,7 @@ key: bd32a0e106
 xp: 100
 ```
 
-For this exercise, we will use data from The Behavioral Risk Factor Surveillance System (BRFSS).  This is an annual telephone survey of 350,000 people in the United States that is designed to identify emerging health trends. For example, respondents are asked about their diet and weekly physical activity, their HIV/AIDS status, possible tobacco use, and even their level of healthcare coverage.  We will focus on a random sample of 20,000 people from the BRFSS survey conducted in 2000. This dataset is already loaded into memory and is called `cdc`.
+For this exercise, we will use data from The Behavioral Risk Factor Surveillance System (BRFSS).  This is an annual telephone survey of 350,000 people in the U.S. that is designed to identify emerging health trends. For example, respondents are asked about their diet and weekly physical activity, their HIV/AIDS status, tobacco use, and their level of healthcare coverage.  We will focus on a random sample of 20,000 people from the BRFSS survey conducted in 2000. This dataset is already loaded into memory and is called `cdc`.
 
 The data set `cdc` that shows up in your workspace is a *data matrix*, with each
 row representing a *case* and each column representing a *variable*.  R calls 
@@ -165,7 +165,7 @@ Enter `names(cdc)` in the console and count the number of variables.
 
 `@pre_exercise_code`
 ```{r}
-source("http://www.openintro.org/stat/data/cdc.R")
+load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
 ```
 
 `@sct`
@@ -212,7 +212,7 @@ Replace the underscores after the $ with the name of the variable.
 
 `@pre_exercise_code`
 ```{r}
-source("http://www.openintro.org/stat/data/cdc.R")
+load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
 ```
 
 `@sample_code`
@@ -280,7 +280,7 @@ Enter `sd(cdc$weight)` and `sd(cdc$wtdesire)` to calculate the standard deviatio
 
 `@pre_exercise_code`
 ```{r}
-source("http://www.openintro.org/stat/data/cdc.R")
+load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
 ```
 
 `@sct`
@@ -315,7 +315,7 @@ Replace the underscores with the variable name "genhlth" and the command "table"
 
 `@pre_exercise_code`
 ```{r}
-source("http://www.openintro.org/stat/data/cdc.R")
+load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
 ```
 
 `@sample_code`
@@ -371,7 +371,7 @@ Fill in the appropriate variables as defined in the instructions inside the pare
 
 `@pre_exercise_code`
 ```{r}
-source("http://www.openintro.org/stat/data/cdc.R")
+load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
 ```
 
 `@sample_code`
@@ -434,7 +434,7 @@ In the `mean()` function you should specify the `wtdesire` variable in the `cdc`
 
 `@pre_exercise_code`
 ```{r}
-source("http://www.openintro.org/stat/data/cdc.R")
+load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
 ```
 
 `@sample_code`
@@ -514,7 +514,7 @@ Remember that to calculate the z-score you have to divide by the standard deviat
 
 `@pre_exercise_code`
 ```{r}
-source("http://www.openintro.org/stat/data/cdc.R")
+load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
 ```
 
 `@sample_code`
