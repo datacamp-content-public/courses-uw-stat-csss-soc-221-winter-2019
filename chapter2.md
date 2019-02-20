@@ -304,7 +304,9 @@ In the previous exercise you generated two sampling distributions.  Which of the
 - The larger sample size had more variability in its sampling distribution
 
 `@feedback`
-
+- Try again!
+- Great job!
+- Try again!
 
 ---
 
