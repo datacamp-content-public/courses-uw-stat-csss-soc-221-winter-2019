@@ -32,7 +32,7 @@ Explore the different variable types in `ames` using the `summary()` function.  
 
 `@sample_code`
 ```{r}
-load("http://www.openintro.org/stat/data/ames.RData")
+load(url("http://www.openintro.org/stat/data/ames.RData"))
 
 # Check out which variables are included
 names(ames)
@@ -47,7 +47,7 @@ summary(___)
 `@solution`
 ```{r}
 # Load the ames dataset into memory
-load("http://www.openintro.org/stat/data/ames.RData")
+load(url("http://www.openintro.org/stat/data/ames.RData"))
 
 # Check out which variables are included
 names(ames)
