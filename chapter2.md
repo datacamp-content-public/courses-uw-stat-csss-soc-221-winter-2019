@@ -420,7 +420,7 @@ se <- sd_area/sqrt(60)
 
 # Calculate and save the upper and lower C.I.
 lower <- mean_area - 1.96 * se
-upper <- ___ + 1.96 * ___
+upper <- ___ _ 1.96 * ___
 
 # Print the confidence interval:
 print(lower)
