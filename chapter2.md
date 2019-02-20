@@ -382,14 +382,18 @@ xp: 100
 
 In the last exercise, you drew a random sample of 60 houses and calculated the mean and standard deviation of the living area _in your sample_.
 
-In this exercise, we will use the sample mean and standard deviation to calculate the 95% confidence interval around the sample estimate of the mean.
+For this exercise, the `ames` dataframe and a sample mean (`mean_area`) and standard deviation (`sd_area`) area already loaded.  Note that this sample mean and standard deviation may be different than what you calculated in the last exercise as they are calculated for a new sample for this exercise.
+
+In this exercise, we will use the sample mean and standard deviation to calculate the 95% confidence interval around the sample estimate of the mean.  
+
+We will also check whether our sample is one of the 95% of samples that we expect to contain the population parameter.
 
 `@instructions`
-The `ames` dataframe and a sample mean (`mean_area`) and standard deviation (`sd_area`) area already loaded.  Note that this sample mean and standard deviation may be different than what you calculated in the last exercise as they are calculated for a new sample for this exercise.
+Calculate the standard error of the estimate, using the equation for standand error: the standard deviation divided by the square root of the sample size.  The R function `sqrt()` calculates square roots!
 
-Calculate and the standard error of the estimate, using the equation for standand error: the standard deviation divided by the square root of the sample size.  The R function `sqrt()` calculates square roots!
+Calculate the lower and upper limits of the 95% confidence interval.  Remember, the 95% confidence interval is defined by 1.96 standard errors above and below the estimated mean.  
 
-Calculate the lower and upper limits of the 95% confidence interval.  Remember that the 95% confidence interval is defined by 1.96 standard errors above and below the estimate of the mean.
+Finally, calculate the population mean to check whether it falls within your confidence interval.
 
 `@hint`
 
@@ -421,6 +425,9 @@ upper <- ___ + 1.96 * ___
 # Print the confidence interval:
 print(lower)
 print(upper)
+
+# Calculate and print the population mean
+mean(ames$Gr.Liv.Area)
 ```
 
 `@solution`
@@ -437,6 +444,9 @@ upper <- mean_area + 1.96 * se
 # Print the confidence interval:
 print(lower)
 print(upper)
+
+# Calculate and print the population mean
+mean(ames$Gr.Liv.Area)
 ```
 
 `@sct`
@@ -446,7 +456,7 @@ print(upper)
 
 ---
 
-## Inference: Interpret confidence interval
+## Checkpoint: Interpret confidence interval
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -477,7 +487,7 @@ key: 8f67b77e3f
 xp: 100
 ```
 
-
+As a last exercise to explore sampling distributions and confidence intervals, 
 
 `@instructions`
 
