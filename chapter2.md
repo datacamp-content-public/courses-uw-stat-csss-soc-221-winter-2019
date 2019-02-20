@@ -287,6 +287,29 @@ hist(sample_means500)
 
 ---
 
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 8dcbcf00a9
+xp: 50
+```
+
+In the previous exercise you generated two sampling distributions.  Which of the following were NOT features of the distributions you plotted?
+
+`@hint`
+
+
+`@possible_answers`
+- The smaller sample size had a wider spread than the larger sample size.
+[- The center of the two distributions was approximately the same.]
+- The larger sample size had more variability in its sampling distribution
+
+`@feedback`
+
+
+---
+
 ## Explore data: Calculate mean and standard deviation
 
 ```yaml
