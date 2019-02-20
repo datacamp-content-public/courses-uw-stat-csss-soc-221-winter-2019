@@ -249,7 +249,7 @@ for(i in 1:5000){
 # Loop over 5000 samples of 100 houses
 sample_means500 <- rep(NA, 5000)
 for(i in 1:5000){
-   samp <- sample(area, 500)
+   samp <- sample(ames$Gr.Liv.Area, 500)
    sample_means500[i] <- mean(samp)
    }
 
