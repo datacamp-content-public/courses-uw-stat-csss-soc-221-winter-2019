@@ -1,20 +1,26 @@
 ---
 title: 'Lab 2: Sampling Distributions & Confidence Intervals'
-description: ""
+description: "In this lab, we investigate the ways in which the statistics from a random sample of data can serve as point estimates for population parameters. We’re interested in formulating a sampling distribution of our estimate in order to learn about the properties of the estimate, such as its distribution.\n\nAfter practicing with sampling distribution, we will see how to build confidence intervals using the standard error and sample statistics of the mean and standard deviation."
 ---
 
-## Inference: Simulate sampling distribution
+## Explore data: load data and identify numeric variables
 
 ```yaml
 type: NormalExercise
-key: 568c9f0399
+key: 07a1ff1894
 xp: 100
 ```
 
+We consider real estate data from the city of Ames, Iowa. Our focus for this lab will be all residential home sales in Ames between 2006 and 2010. This collection represents our population of interest. In this lab we would like to learn about these home sales by taking smaller samples from the full population. 
 
+First, we'll load the data using the `load()` function, specifying the url where the data are stored.
+
+After loading the data, let's look at the variables using the `summary()` function.  You see many variables in the dataset.  For this lab, we’ll just work with two of the variables: the above ground living area of the house in square feet (Gr.Liv.Area) and the sale price (SalePrice).
 
 `@instructions`
+Load the data with the `load()` function using the url "http://www.openintro.org/stat/data/ames.RData".  This creates an R dataframe object called ames.
 
+Explore the different variable types in `ames` using the `summary()` function.  Which variables appear to be continuous and which discrete?
 
 `@hint`
 
@@ -26,11 +32,30 @@ xp: 100
 
 `@sample_code`
 ```{r}
+load("http://www.openintro.org/stat/data/ames.RData")
+
+# Check out which variables are included
+names(ames)
+
+# Look at summary statistics for the variables in the dataset
+summary(___)
+
+
 
 ```
 
 `@solution`
 ```{r}
+# Load the ames dataset into memory
+load("http://www.openintro.org/stat/data/ames.RData")
+
+# Check out which variables are included
+names(ames)
+
+# Look at summary statistics for the variables in the dataset
+summary(ames)
+
+
 
 ```
 
@@ -41,11 +66,11 @@ xp: 100
 
 ---
 
-## Explore data: load data and identify numeric variables
+## Inference: Simulate sampling distribution
 
 ```yaml
 type: NormalExercise
-key: 07a1ff1894
+key: 568c9f0399
 xp: 100
 ```
 
