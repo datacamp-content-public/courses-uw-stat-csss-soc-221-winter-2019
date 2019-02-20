@@ -302,10 +302,12 @@ key: 4bb5ce050d
 xp: 50
 ```
 
-What is the best interpretation of the p-value of the regression coefficients?
+What is the best interpretation of a p-value of a regression coefficient that is smaller than 0.05?
 
 `@possible_answers`
-
+- A small p-value means we can be 95% confident that x causes y.
+- A small p-value means that the explanatory variable has a large effect on the response.
+- [A small p-value means we would be surprised to see an in-sample relationship this strong if the variables were independent in the population.]
 
 `@hint`
 
@@ -317,9 +319,7 @@ What is the best interpretation of the p-value of the regression coefficients?
 
 `@sct`
 ```{r}
-- A p-value less than 0.05 means that the explanatory variable has a large effect on the response variable.
-- A p-value less than 0.05 means that we would be surprised to see this magnitude of a relationship in our sample if the true relationship in the population was one of independence.
-- A p-value less than 0.05 means we can be 95% confident that x causes y.
+
 ```
 
 ---
