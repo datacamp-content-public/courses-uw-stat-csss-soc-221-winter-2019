@@ -525,7 +525,7 @@ for(i in 1:50){
 lower_vector <- samp_mean - 1.96 * samp_sd / sqrt(60) 
 upper_vector <- ___
 
-plot_ci(lower_vector, upper_vector, mean(population))
+plot_ci(lower_vector, upper_vector, mean(ames$Gr.Liv.Area))
 ```
 
 `@solution`
@@ -545,7 +545,7 @@ for(i in 1:50){
 lower_vector <- samp_mean - 1.96 * samp_sd / sqrt(60) 
 upper_vector <- samp_mean + 1.96 * samp_sd / sqrt(60) 
 
-plot_ci(lower_vector, upper_vector, mean(population))
+plot_ci(lower_vector, upper_vector, mean(ames$Gr.Liv.Area))
 
 ```
 
