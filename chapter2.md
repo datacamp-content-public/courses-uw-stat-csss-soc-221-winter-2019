@@ -409,7 +409,18 @@ sd_area <- sd(area_sample)
 
 `@sample_code`
 ```{r}
+# ames dataframe, mean_area, and sd_area are already loaded.
 
+# Calculate standard error and save as object 'se', using a sample size of 60
+se <- sd_area/sqrt(60)
+
+# Calculate and save the upper and lower C.I.
+lower <- mean_area - 1.96 * se
+upper <- ___ + 1.96 * ___
+
+# Print the confidence interval:
+print(lower)
+print(upper)
 ```
 
 `@solution`
@@ -420,8 +431,8 @@ sd_area <- sd(area_sample)
 se <- sd_area/sqrt(60)
 
 # Calculate and save the upper and lower C.I.
-lower <- sample_mean - 1.96 * se
-upper <- ___ + 1.96 * ___
+lower <- mean_area - 1.96 * se
+upper <- mean_area + 1.96 * se
 
 # Print the confidence interval:
 print(lower)
