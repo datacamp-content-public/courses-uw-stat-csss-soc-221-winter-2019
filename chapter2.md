@@ -143,6 +143,72 @@ mean(sample3, 50)
 
 ---
 
+## Inference: Simulate sampling distribution 2
+
+```yaml
+type: NormalExercise
+key: ec43918fba
+xp: 100
+```
+
+Not surprisingly, every time we take another random sample, we get a different sample mean.  In this lab, because we have access to the population, we can build up the sampling distribution for the sample mean by repeating the above steps many times. Here we will generate 5000 samples and compute the sample mean of each.
+
+We will use a programming method called a "loop" to draw 5000 samples and calculate their means. You do not need to modify the code in the loop, but you may want to take a look and see if you can tell what it is doing.
+
+Once we have generated our 5000 samples and saved their means (to an object called `sample_means50`) we will generate a histogram to visualize the sampling distribution of the mean living area.
+
+
+
+`@instructions`
+Run the loop code to generate the R object `sample_means50` that contains all the sample means.
+
+Generate the histogram of the means of the 5000 samples of 50 houses each.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+load(url("http://www.openintro.org/stat/data/ames.RData"))
+```
+
+`@sample_code`
+```{r}
+# The ames dataset is already loaded
+
+# Run loop to fill in the set of 5000 sample means
+sample_means50 <- rep(NA, 5000)
+for(i in 1:5000){
+   samp <- sample(area, 50)
+   sample_means50[i] <- mean(samp)
+   }
+
+# Plot histogram
+hist(sample_means50)
+```
+
+`@solution`
+```{r}
+# The ames dataset is already loaded
+
+# Run loop to fill in the set of 5000 sample means
+sample_means50 <- rep(NA, 5000)
+for(i in 1:5000){
+   samp <- sample(area, 50)
+   sample_means50[i] <- mean(samp)
+   }
+
+# Plot histogram
+hist(sample_means50)
+```
+
+`@sct`
+```{r}
+
+```
+
+---
+
 ## Explore data: Calculate mean and standard deviation
 
 ```yaml
