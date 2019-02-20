@@ -510,9 +510,7 @@ load(url("http://www.openintro.org/stat/data/ames.RData"))
 
 `@sample_code`
 ```{r}
-# The ames dataframe is already loaded
-
-# Loop function to calculate the sample means and standard deviations for 50 samples of 60 houses each:
+# Loop function to calculate the sample means and sds for 50 samples of 60 houses each:
 samp_mean <- rep(NA, 50)
 samp_sd <- rep(NA, 50)
 for(i in 1:50){
@@ -530,9 +528,7 @@ plot_ci(lower_vector, upper_vector, mean(ames$Gr.Liv.Area))
 
 `@solution`
 ```{r}
-# The ames dataframe is already loaded
-
-# Loop function to calculate the sample means and standard deviations for 50 samples of 60 houses each:
+# Loop function to calculate the sample means and sds for 50 samples of 60 houses each:
 samp_mean <- rep(NA, 50)
 samp_sd <- rep(NA, 50)
 for(i in 1:50){
