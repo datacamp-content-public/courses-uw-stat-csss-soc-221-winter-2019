@@ -318,27 +318,51 @@ key: c58d27ef76
 xp: 100
 ```
 
+In practice, we do not have access to data for the full population, and can only draw one sample from the population.
 
+In this case, we can't draw the full sampling distribution.  Instead, we use confidence intervals calculated from the standard error of our estimate of the mean.  In this and the following exercise, will walk through calculating the standard error and confidence intervals.
+
+To start, we will draw a sample from our population of houses, and calculate the _mean_ and _standard deviation_ of the living area of the houses in the sample.  
 
 `@instructions`
+The ames dataframe is already loaded.  As we did in previou exercise, draw a sample (with a sample size of 60) from the living areas of the whole population of houses.
 
+Next, calculate the mean and standard deviation of the living area sample and save these statistics to sensibly named objects.
 
 `@hint`
 
 
 `@pre_exercise_code`
 ```{r}
-
+load(url("http://www.openintro.org/stat/data/ames.RData"))
 ```
 
 `@sample_code`
 ```{r}
+# The ames dataframe is already loaded 
 
+# Draw a sample of living areas for 60 houses from the population
+area_sample <- sample(ames$Gr.Liv.Area, 60)
+
+# Calculate and save the mean living area in the sample
+mean_area <- mean(area_sample)
+
+# Calculate and save the standard deviation of the sample of living areas
+sd_area <- sd(area_sample)
 ```
 
 `@solution`
 ```{r}
+# The ames dataframe is aready loaded.
 
+# Draw a sample of living areas for 60 houses from the population
+area_sample <- sample(ames$Gr.Liv.Area, 60)
+
+# Calculate and save the mean living area in the sample
+mean_area <- mean(area_sample)
+
+# Calculate and save the standard deviation of the sample of living areas
+sd_area <- sd(area_sample)
 ```
 
 `@sct`
