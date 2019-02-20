@@ -74,7 +74,11 @@ key: 568c9f0399
 xp: 100
 ```
 
+In this lab we have access to the entire population, but this is rarely the case in real life. Gathering information on an entire population is often extremely costly or impossible. Because of this, we often take a sample of the population and use that to understand the properties of the population.
 
+We can create random samples from the population all houses in Ames using the `sample()` function.  
+
+In this exercise, we will draw several samples of 50 houses in Ames and compare their estimated mean area.
 
 `@instructions`
 
@@ -84,7 +88,7 @@ xp: 100
 
 `@pre_exercise_code`
 ```{r}
-
+load("ames.RData")
 ```
 
 `@sample_code`
@@ -94,7 +98,7 @@ xp: 100
 
 `@solution`
 ```{r}
-
+sample1 <- 
 ```
 
 `@sct`
