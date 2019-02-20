@@ -498,7 +498,7 @@ Run the loop code to draw 50 samples of 60 houses and save the 50 sample means a
 
 Calculate the upper and lower bounds of the confidence intervals for each sample, saving the collected upper and lower bounds in objects called `upper_bounds` and `lower_bounds`.
 
-Run the `plot_ci()` function to generate a plot of all the confidence intervals and a line showing the population mean.
+Run the `plot_ci()` function to generate a plot of all the confidence intervals, a line showing the population mean, and highlighting of intervals that do not contain the population mean.
 
 `@hint`
 
