@@ -209,6 +209,84 @@ hist(sample_means50)
 
 ---
 
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+key: faddd2cde4
+xp: 100
+```
+
+The law of large numbers means that as our sample size increases, the mean living area should be a more reliable estimate of the population mean, and the standard error of the sample distribution will decrease.
+
+In this exercise, we will demonstrate this by repeating our sampling loop from the last exercise,this time drawing 5000 samples of 100 houses rather than samples of 50 houses.  
+
+We will then generate histograms of the two sampling distributions to see how they compare
+
+`@instructions`
+The ames dataset and the sample_means50 object are both already loaded.
+
+Run the code to loop over 5000 samples of 100 houses each, which will be saved in the `sample_means100` object.
+
+Generate two histograms, one for each sampling distribution (`sample_means50` and `sample_means100`, using the `hist()` function
+
+`@hint`
+Have you made sure to put the name of the `sample_means100` object inside the second histogram command?
+
+`@pre_exercise_code`
+```{r}
+load(url("http://www.openintro.org/stat/data/ames.RData"))
+sample_means50 <- rep(NA, 5000)
+for(i in 1:5000){
+   samp <- sample(ames$Gr.Liv.Area, 50)
+   sample_means50[i] <- mean(samp)
+   }
+
+```
+
+`@sample_code`
+```{r}
+# Loop over 5000 samples of 100 houses
+sample_means10 <- rep(NA, 5000)
+for(i in 1:5000){
+   samp <- sample(area, 100)
+   sample_means100[i] <- mean(samp)
+   }
+
+# code to let us put two plots side by side
+par(mfrow = c(3, 1))
+# code to make the x-axis of the plots consistent so we can compare
+xlimits <- range(sample_means50)
+
+hist(sample_means50)
+hist(___)
+```
+
+`@solution`
+```{r}
+# Loop over 5000 samples of 100 houses
+sample_means10 <- rep(NA, 5000)
+for(i in 1:5000){
+   samp <- sample(ames$Gr.Liv.Area, 100)
+   sample_means100[i] <- mean(samp)
+   }
+
+# code to let us put two plots side by side
+par(mfrow = c(3, 1))
+# code to make the x-axis of the plots consistent so we can compare
+xlimits <- range(sample_means50)
+
+hist(sample_means50)
+hist(sample_means100)
+```
+
+`@sct`
+```{r}
+
+```
+
+---
+
 ## Explore data: Calculate mean and standard deviation
 
 ```yaml
