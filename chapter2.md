@@ -380,17 +380,31 @@ key: d319ba296c
 xp: 100
 ```
 
+In the last exercise, you drew a random sample of 60 houses and calculated the mean and standard deviation of the living area _in your sample_.
 
+In this exercise, we will use the sample mean and standard deviation to calculate the 95% confidence interval around the sample estimate of the mean.
 
 `@instructions`
+The `ames` dataframe and a sample mean (`mean_area`) and standard deviation (`sd_area`) area already loaded.  Note that this sample mean and standard deviation may be different than what you calculated in the last exercise as they are calculated for a new sample for this exercise.
 
+Calculate and the standard error of the estimate, using the equation for standand error: the standard deviation divided by the square root of the sample size.  The R function `sqrt()` calculates square roots!
+
+Calculate the lower and upper limits of the 95% confidence interval.  Remember that the 95% confidence interval is defined by 1.96 standard errors above and below the estimate of the mean.
 
 `@hint`
 
 
 `@pre_exercise_code`
 ```{r}
+load(url("http://www.openintro.org/stat/data/ames.RData"))
+# Draw a sample of living areas for 60 houses from the population
+area_sample <- sample(ames$Gr.Liv.Area, 60)
 
+# Calculate and save the mean living area in the sample
+mean_area <- mean(area_sample)
+
+# Calculate and save the standard deviation of the sample of living areas
+sd_area <- sd(area_sample)
 ```
 
 `@sample_code`
@@ -400,7 +414,18 @@ xp: 100
 
 `@solution`
 ```{r}
+# ames dataframe, mean_area, and sd_area are already loaded.
 
+# Calculate standard error and save as object 'se', using a sample size of 60
+se <- sd_area/sqrt(60)
+
+# Calculate and save the upper and lower C.I.
+lower <- sample_mean - 1.96 * se
+upper <- ___ + 1.96 * ___
+
+# Print the confidence interval:
+print(lower)
+print(upper)
 ```
 
 `@sct`
