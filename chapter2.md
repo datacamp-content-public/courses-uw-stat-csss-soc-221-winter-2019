@@ -179,7 +179,7 @@ load(url("http://www.openintro.org/stat/data/ames.RData"))
 # Run loop to fill in the set of 5000 sample means
 sample_means50 <- rep(NA, 5000)
 for(i in 1:5000){
-   samp <- sample(area, 50)
+   samp <- sample(ames$Gr.Liv.Area, 50)
    sample_means50[i] <- mean(samp)
    }
 
@@ -194,7 +194,7 @@ hist(sample_means50)
 # Run loop to fill in the set of 5000 sample means
 sample_means50 <- rep(NA, 5000)
 for(i in 1:5000){
-   samp <- sample(area, 50)
+   samp <- sample(ames$Gr.Liv.Area, 50)
    sample_means50[i] <- mean(samp)
    }
 
