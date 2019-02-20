@@ -300,7 +300,7 @@ In the previous exercise you generated two sampling distributions.  Which of the
 
 `@possible_answers`
 - The smaller sample size had a wider spread than the larger sample size.
-[- The center of the two distributions was approximately the same.]
+- [The center of the two distributions was approximately the same.]
 - The larger sample size had more variability in its sampling distribution
 
 `@feedback`
