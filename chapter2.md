@@ -117,7 +117,7 @@ xp: 100
 
 ---
 
-## Inference: Calculate standard error 
+## Inference: Calculate standard error
 
 ```yaml
 type: NormalExercise
