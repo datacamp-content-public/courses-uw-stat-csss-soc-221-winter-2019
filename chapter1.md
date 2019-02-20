@@ -244,7 +244,7 @@ mean(cdc$wtdesire)
 # Calculate standard deviation of actual weight
 sd(cdc$weight)
 # Calc4ulate standard deviation of desired weight
-sd(cdc$weight)
+sd(cdc$wtdesire)
 ```
 
 `@sct`
