@@ -249,10 +249,10 @@ sd(cdc$weight)
 
 `@sct`
 ```{r}
-ex() %>% check_code(mean(cdc$weight))
-ex() %>% check_code(mean(cdc$wtdesire))
-ex() %>% check_code(sd(cdc$weight))
-ex() %>% check_code(sd(cdc$wtdesire))
+ex() %>% check_code("mean(cdc$weight)", fixed = TRUE)
+ex() %>% check_code("mean(cdc$wtdesire)", fixed = TRUE)
+ex() %>% check_code("sd(cdc$weight)", fixed = TRUE)
+ex() %>% check_code("sd(cdc$wtdesire)", fixed = TRUE)
 success_msg("Great!  Now you know how to explore basic measures of center and spread.")
 ```
 
