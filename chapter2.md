@@ -505,6 +505,10 @@ Run the `plot_ci()` function to generate a plot of all the confidence intervals 
 
 `@pre_exercise_code`
 ```{r}
+contains <- function(lo,hi,m){
+   if(m>= lo & m <= hi) return(TRUE)
+   else return(FALSE)
+}
 load(url("http://www.openintro.org/stat/data/ames.RData"))
 ```
 
@@ -528,6 +532,7 @@ plot_ci(lower_vector, upper_vector, mean(ames$Gr.Liv.Area))
 
 `@solution`
 ```{r}
+
 # Loop function to calculate the sample means and sds for 50 samples of 60 houses each:
 samp_mean <- rep(NA, 50)
 samp_sd <- rep(NA, 50)
