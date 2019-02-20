@@ -265,7 +265,7 @@ hist(___)
 `@solution`
 ```{r}
 # Loop over 5000 samples of 100 houses
-sample_means10 <- rep(NA, 5000)
+sample_means100 <- rep(NA, 5000)
 for(i in 1:5000){
    samp <- sample(ames$Gr.Liv.Area, 100)
    sample_means100[i] <- mean(samp)
