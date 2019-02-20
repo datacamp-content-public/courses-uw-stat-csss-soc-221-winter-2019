@@ -157,8 +157,6 @@ We will use a programming method called a "loop" to draw 5000 samples and calcul
 
 Once we have generated our 5000 samples and saved their means (to an object called `sample_means50`) we will generate a histogram to visualize the sampling distribution of the mean living area.
 
-
-
 `@instructions`
 Run the loop code to generate the R object `sample_means50` that contains all the sample means.
 
@@ -322,7 +320,7 @@ In practice, we do not have access to data for the full population, and can only
 
 In this case, we can't draw the full sampling distribution.  Instead, we use confidence intervals calculated from the standard error of our estimate of the mean.  In this and the following exercise, will walk through calculating the standard error and confidence intervals.
 
-To start, we will draw a sample from our population of houses, and calculate the _mean_ and _standard deviation_ of the living area of the houses in the sample.  
+To start, we will draw a sample from our population of houses, and calculate the _mean_ and _standard deviation_ of the living area of the houses in the sample.
 
 `@instructions`
 The ames dataframe is already loaded.  As we did in previou exercise, draw a sample (with a sample size of 60) from the living areas of the whole population of houses.
