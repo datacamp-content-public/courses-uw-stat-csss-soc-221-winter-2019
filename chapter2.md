@@ -226,9 +226,9 @@ We will then generate histograms of the two sampling distributions to see how th
 `@instructions`
 The ames dataset and the sample_means50 object are both already loaded.
 
-Run the code to loop over 5000 samples of 100 houses each, which will be saved in the `sample_means100` object.
+Run the code to loop over 5000 samples of 100 houses each, which will be saved in the `sample_means500` object.
 
-Generate two histograms, one for each sampling distribution (`sample_means50` and `sample_means100`, using the `hist()` function
+Generate two histograms, one for each sampling distribution (`sample_means50` and `sample_means500`, using the `hist()` function
 
 `@hint`
 Have you made sure to put the name of the `sample_means100` object inside the second histogram command?
@@ -247,14 +247,14 @@ for(i in 1:5000){
 `@sample_code`
 ```{r}
 # Loop over 5000 samples of 100 houses
-sample_means10 <- rep(NA, 5000)
+sample_means500 <- rep(NA, 5000)
 for(i in 1:5000){
-   samp <- sample(area, 100)
-   sample_means100[i] <- mean(samp)
+   samp <- sample(area, 500)
+   sample_means500[i] <- mean(samp)
    }
 
 # code to let us put two plots side by side
-par(mfrow = c(3, 1))
+par(mfrow = c(2, 1))
 # code to make the x-axis of the plots consistent so we can compare
 xlimits <- range(sample_means50)
 
@@ -265,19 +265,19 @@ hist(___)
 `@solution`
 ```{r}
 # Loop over 5000 samples of 100 houses
-sample_means100 <- rep(NA, 5000)
+sample_means500 <- rep(NA, 5000)
 for(i in 1:5000){
-   samp <- sample(ames$Gr.Liv.Area, 100)
-   sample_means100[i] <- mean(samp)
+   samp <- sample(ames$Gr.Liv.Area, 500)
+   sample_means500[i] <- mean(samp)
    }
 
 # code to let us put two plots side by side
-par(mfrow = c(3, 1))
+par(mfrow = c(2, 1))
 # code to make the x-axis of the plots consistent so we can compare
 xlimits <- range(sample_means50)
 
 hist(sample_means50)
-hist(sample_means100)
+hist(sample_means500)
 ```
 
 `@sct`
