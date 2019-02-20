@@ -201,13 +201,15 @@ key: 55f0992347
 xp: 50
 ```
 
-
+What is the best interpretation of the statement "we reject the null hypothesis"?
 
 `@hint`
 
 
 `@possible_answers`
-
+- We have proved that our alternative hypothesis  is true.
+- We do not have enough evidence to be confident in our alternative hypothesis.
+- [In only one out of every 20 samples would we expect to see a difference in sample means this large if there was not a real difference in the population]
 
 `@feedback`
 
