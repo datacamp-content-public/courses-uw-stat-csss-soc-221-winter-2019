@@ -209,7 +209,7 @@ hist(sample_means50)
 
 ---
 
-## Insert exercise title here
+## Inference: Simulate larger-N sampling distribution
 
 ```yaml
 type: NormalExercise
@@ -287,7 +287,7 @@ hist(sample_means500)
 
 ---
 
-## Insert exercise title here
+## Checkpoint: Understanding sampling distributions
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -446,21 +446,23 @@ print(upper)
 
 ---
 
-## Inference: Interpret standard error
+## Inference: Interpret confidence interval
 
 ```yaml
 type: PureMultipleChoiceExercise
-key: 722b051211
+key: 08b306a6eb
 xp: 50
 ```
 
-
+What is the best interpretation of the 95% confidence you calculated?
 
 `@hint`
 
 
 `@possible_answers`
-
+- There is a 95% probability that the true population value is within the confidence interval range
+- [In 19 out of 20 samples, this range would include the true population value]
+- It is impossible for the true population parameter to be outside the range of the confidence interval
 
 `@feedback`
 
@@ -502,23 +504,3 @@ xp: 100
 ```{r}
 
 ```
-
----
-
-## Inference: Interpret confidence interval
-
-```yaml
-type: PureMultipleChoiceExercise
-key: 08b306a6eb
-xp: 50
-```
-
-
-
-`@hint`
-
-
-`@possible_answers`
-
-
-`@feedback`
