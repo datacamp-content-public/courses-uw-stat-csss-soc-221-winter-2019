@@ -105,7 +105,7 @@ Replace the underscores in `nrow(___)` and `head(___)` with the letters `cdc` to
 
 `@pre_exercise_code`
 ```{r}
-load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
+load(url("https://assets.datacamp.com/production/repositories/4687/datasets/f2e21c95b05f391ee225a468357d88cfd7578cee/cdc.RData"))
 ```
 
 `@sample_code`
@@ -165,7 +165,7 @@ Enter `names(cdc)` in the console and count the number of variables.
 
 `@pre_exercise_code`
 ```{r}
-load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
+load(url("https://assets.datacamp.com/production/repositories/4687/datasets/f2e21c95b05f391ee225a468357d88cfd7578cee/cdc.RData"))
 ```
 
 `@sct`
@@ -212,7 +212,7 @@ Replace the underscores after the $ with the name of the variable.
 
 `@pre_exercise_code`
 ```{r}
-load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
+load(url("https://assets.datacamp.com/production/repositories/4687/datasets/f2e21c95b05f391ee225a468357d88cfd7578cee/cdc.RData"))
 ```
 
 `@sample_code`
@@ -280,7 +280,7 @@ Enter `sd(cdc$weight)` and `sd(cdc$wtdesire)` to calculate the standard deviatio
 
 `@pre_exercise_code`
 ```{r}
-load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
+load(url("https://assets.datacamp.com/production/repositories/4687/datasets/f2e21c95b05f391ee225a468357d88cfd7578cee/cdc.RData"))
 ```
 
 `@sct`
@@ -315,7 +315,7 @@ Replace the underscores with the variable name "genhlth" and the command "table"
 
 `@pre_exercise_code`
 ```{r}
-load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
+load(url("https://assets.datacamp.com/production/repositories/4687/datasets/f2e21c95b05f391ee225a468357d88cfd7578cee/cdc.RData"))
 ```
 
 `@sample_code`
@@ -371,7 +371,7 @@ Fill in the appropriate variables as defined in the instructions inside the pare
 
 `@pre_exercise_code`
 ```{r}
-load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
+load(url("https://assets.datacamp.com/production/repositories/4687/datasets/f2e21c95b05f391ee225a468357d88cfd7578cee/cdc.RData"))
 ```
 
 `@sample_code`
@@ -434,7 +434,7 @@ In the `mean()` function you should specify the `wtdesire` variable in the `cdc`
 
 `@pre_exercise_code`
 ```{r}
-load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
+load(url("https://assets.datacamp.com/production/repositories/4687/datasets/f2e21c95b05f391ee225a468357d88cfd7578cee/cdc.RData"))
 ```
 
 `@sample_code`
@@ -514,7 +514,7 @@ Remember that to calculate the z-score you have to divide by the standard deviat
 
 `@pre_exercise_code`
 ```{r}
-load(url("https://assets.datacamp.com/production/repositories/4625/datasets/59016f8f9e27761faf10c9932a85dbbf339e162b/cdc.RData"))
+load(url("https://assets.datacamp.com/production/repositories/4687/datasets/f2e21c95b05f391ee225a468357d88cfd7578cee/cdc.RData"))
 ```
 
 `@sample_code`
