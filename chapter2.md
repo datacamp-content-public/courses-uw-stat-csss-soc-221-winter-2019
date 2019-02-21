@@ -434,7 +434,7 @@ upper <- ___ _ 1.96 * ___
 print(lower)
 print(upper)
 
-# Calculate and print the population mean
+# Print the population mean.  Is in the C.I.?
 mean(ames$Gr.Liv.Area)
 ```
 
@@ -453,13 +453,16 @@ upper <- mean_area + 1.96 * se
 print(lower)
 print(upper)
 
-# Calculate and print the population mean
+# Print the population mean.  Is in the C.I.?
 mean(ames$Gr.Liv.Area)
 ```
 
 `@sct`
 ```{r}
-
+ex() %>%check_code("<- mean_area + 1.96 * se")
+ex() %>%check_code("print(lower)", fixed  = TRUE)
+ex() %>%check_code("print(upper)", fixed  = TRUE)
+success_msg("You've made a confidence interval!  Was yours one of the 95% of samples we expect to include the population parameter?")
 ```
 
 ---
