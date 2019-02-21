@@ -275,7 +275,7 @@ xlimits <- range(sample_means50) # code to make the x-axis of the plots match
 # code to plot the n=50 samples
 hist(sample_means50, xlim = xlimits)
 # code to plot the n=500 samples
-hist(sample_means500)
+hist(sample_means500, xlim = xlimits)
 ```
 
 `@sct`
