@@ -249,12 +249,13 @@ for(i in 1:5000){
    sample_means500[i] <- mean(samp)
    }
 
-# code to let us put two plots on top of each other
-par(mfrow = c(2, 1))
-# code to make the x-axis of the plots consistent so we can compare
-xlimits <- range(sample_means50)
+# Options for drawing the histogram:
+par(mfrow = c(2, 1)) #code to let us put two plots on top of each other
+xlimits <- range(sample_means50) # code to make the x-axis of the plots match
 
+# code to plot the n=50 samples
 hist(sample_means50, xlim = xlimits)
+# code to plot the n=500 samples
 hist(___, xlim = xlimits)
 ```
 
@@ -267,18 +268,22 @@ for(i in 1:5000){
    sample_means500[i] <- mean(samp)
    }
 
-# code to let us put two plots on top of each other
-par(mfrow = c(2, 1))
-# code to make the x-axis of the plots consistent so we can compare
-xlimits <- range(sample_means50)
+# Options for drawing the histogram:
+par(mfrow = c(2, 1)) #code to let us put two plots on top of each other
+xlimits <- range(sample_means50) # code to make the x-axis of the plots match
 
-hist(sample_means50)
+# code to plot the n=50 samples
+hist(sample_means50, xlim = xlimits)
+# code to plot the n=500 samples
 hist(sample_means500)
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_object("sample_means500") %>% check_equal(eq_fun = function(x, y){all.equal(sum(!is.na(x)), sum(!is.na(x)))})
+ex %>% check_code("hist(sample_means50, xlim = xlimits)", fixed = TRUE)
+ex %>% check_code("hist(sample_means500, xlim = xlimits)", fixed = TRUE)
+success_msg("Great job! You should have noticed that the two distributions had a similar center but different spread.")
 ```
 
 ---
@@ -340,13 +345,13 @@ load(url("http://www.openintro.org/stat/data/ames.RData"))
 # The ames dataframe is already loaded 
 
 # Draw a sample of living areas for 60 houses from the population
-area_sample <- sample(ames$Gr.Liv.Area, 60)
+area_sample <- sample(ames$Gr.Liv.Area, ___)
 
 # Calculate and save the mean living area in the sample
 mean_area <- mean(area_sample)
 
 # Calculate and save the standard deviation of the sample of living areas
-sd_area <- sd(area_sample)
+sd_area <- sd(___)
 ```
 
 `@solution`
@@ -365,7 +370,12 @@ sd_area <- sd(area_sample)
 
 `@sct`
 ```{r}
-
+ex() %>% check_function("sample") %>%{
+  check_arg(., "x") %>% check_equal()
+  check_arg(., "n") %>% check_equal()
+}
+ex() %>% check_function("sd") %>% check_arg("x") %>%check_equal(eval = FALSE)
+success_msg("Nice job. Next we'll use that mean and standard deviation to construct confidence intervals.")
 ```
 
 ---
