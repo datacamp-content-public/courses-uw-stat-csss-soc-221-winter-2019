@@ -509,7 +509,7 @@ Once we have drawn our 50 samples, we will calculate the confidence interval aro
 `@instructions`
 Run the loop code to draw 50 samples of 60 houses and save the 50 sample means and standard deviations.
 
-Calculate the upper and lower bounds of the confidence intervals for each sample, saving the collected upper and lower bounds in objects called `upper_bounds` and `lower_bounds`.
+Calculate the upper and lower bounds of the confidence intervals for each sample (sample size = 60), saving the upper and lower limits in objects `upper_bounds` and `lower_bounds`.
 
 Run the `plot_ci()` function to generate a plot of all the confidence intervals, a line showing the population mean, and highlighting of intervals that do not contain the population mean.
 
@@ -541,7 +541,6 @@ plot_ci(lower_vector, upper_vector, mean(ames$Gr.Liv.Area))
 
 `@solution`
 ```{r}
-
 # Loop function to calculate the sample means and sds for 50 samples of 60 houses each:
 samp_mean <- rep(NA, 50)
 samp_sd <- rep(NA, 50)
@@ -556,10 +555,11 @@ lower_vector <- samp_mean - 1.96 * samp_sd / sqrt(60)
 upper_vector <- samp_mean + 1.96 * samp_sd / sqrt(60) 
 
 #plot_ci(lower_vector, upper_vector, mean(ames$Gr.Liv.Area))
-
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_object("samp_sd") %>% check_equal(eq_fun = function(x, y){all.equal(sum(!is.na(x)), sum(!is.na(x)))})
+ex() %>% check_code("<- samp_mean + 1.96 * samp_sd / sqrt(60)")
+success_msg("So many confidence intervals! Did you notice how many of them did not include the population mean?")
 ```
