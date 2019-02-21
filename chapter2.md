@@ -82,7 +82,7 @@ We can create random samples from the population all houses in Ames using the `s
 In this exercise, we will draw several samples of the living area of 50 houses in Ames and compare their estimated mean area.
 
 `@instructions`
-The ames dataset is already loaded.  Using the `sample()` function, draw three samples from the full population of houses' living areas in Ames.  
+The `ames` dataset is already loaded.  Using the `sample()` function, draw three samples from the full population of houses' living areas in Ames.  
 
 Examine the mean living area estimate from each sample.  How variable are these estimates of the mean?
 
@@ -96,8 +96,6 @@ load(url("http://www.openintro.org/stat/data/ames.RData"))
 
 `@sample_code`
 ```{r}
-# The ames data set is already loaded.
-
 # Draw one sample
 sample1 <- sample(ames$Gr.Liv.Area, 50)
 # Print the mean living area in that sample
@@ -112,13 +110,10 @@ mean(sample2)
 sample3 <- sample(___, __)
 # Print the mean living area in that sample
 mean(___)
-
 ```
 
 `@solution`
 ```{r}
-# The ames data set is already loaded.
-
 # Draw one sample
 sample1 <- sample(ames$Gr.Liv.Area, 50)
 # Print the mean living area in that sample
@@ -133,13 +128,13 @@ mean(sample2, 50)
 sample3 <- sample(ames$Gr.Liv.Area, 50)
 # Print the mean living area in that sample
 mean(sample3, 50)
-
-
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_code("sample(ames$Gr.Liv.Area, 50)", fixed = TRUE, times = 3)
+ex() %>% check_code("mean(sample3)", fixed = TRUE)
+success_msg("Nice job! Were each of the sample means the same, or different?")
 ```
 
 ---
@@ -203,7 +198,9 @@ hist(sample_means50)
 
 `@sct`
 ```{r}
-
+ex() %>% check_object("sample_means50") %>% check_equal(eq_fun = function(x, y){all.equal(sum(!is.na(x)), sum(!is.na(x)))})
+ex() %>% check_code("hist(sample_means50)", fixed = TRUE)
+success_msg("Now you've seen an example of one sampling distribution, for sample size n = 50")
 ```
 
 ---
