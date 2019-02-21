@@ -374,7 +374,7 @@ ex() %>% check_function("sample") %>%{
   check_arg(., "x") %>% check_equal()
   check_arg(., "size") %>% check_equal()
 }
-ex() %>% check_function("sd") %>% check_arg("x") %>%check_equal(eval = FALSE, incorrect_msg("Did you calculate the standard deviation of the area sample?"))
+ex() %>% check_function("sd") %>% check_arg("x") %>%check_equal(eval = FALSE, incorrect_msg="Did you calculate the standard deviation of the area sample?")
 success_msg("Nice job. Next we'll use that mean and standard deviation to construct confidence intervals.")
 ```
 
