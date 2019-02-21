@@ -397,11 +397,11 @@ In this exercise, we will use the sample mean and standard deviation to calculat
 We will also check whether our sample is one of the 95% of samples that we expect to contain the population parameter.
 
 `@instructions`
-Calculate the standard error of the estimate, using the equation for standand error: the standard deviation divided by the square root of the sample size.  The R function `sqrt()` calculates square roots!
+Calculate the standard error of the estimate: the standard deviation divided by the square root (function `sqrt()`) of the sample size.
 
 Calculate the lower and upper limits of the 95% confidence interval.  Remember, the 95% confidence interval is defined by 1.96 standard errors above and below the estimated mean.  
 
-Finally, calculate the population mean to check whether it falls within your confidence interval.
+Finally, calculate the population mean (from the variable `ames$Gr.Liv.Area`) to check whether it falls within your confidence interval.
 
 `@hint`
 
@@ -435,7 +435,7 @@ print(lower)
 print(upper)
 
 # Print the population mean.  Is in the C.I.?
-mean(ames$Gr.Liv.Area)
+mean(___$___)
 ```
 
 `@solution`
@@ -459,9 +459,9 @@ mean(ames$Gr.Liv.Area)
 
 `@sct`
 ```{r}
-ex() %>%check_code("<- mean_area + 1.96 * se")
+ex() %>%check_code("<- mean_area + 1.96 * se", fixed = TRUE)
 ex() %>%check_code("print(lower)", fixed  = TRUE)
-ex() %>%check_code("print(upper)", fixed  = TRUE)
+ex() %>% check_output_expr("mean(ames$Gr.Liv.Area)")
 success_msg("You've made a confidence interval!  Was yours one of the 95% of samples we expect to include the population parameter?")
 ```
 
@@ -478,7 +478,7 @@ xp: 50
 What is the best interpretation of the 95% confidence you calculated?
 
 `@hint`
-
+Remember, we don't actually know the true population distribution, so can't calculate a probability of the true mean falling in a certain range!
 
 `@possible_answers`
 - There is a 95% probability that the true population value is within the confidence interval range
@@ -560,6 +560,6 @@ upper_vector <- samp_mean + 1.96 * samp_sd / sqrt(60)
 `@sct`
 ```{r}
 ex() %>% check_object("samp_sd") %>% check_equal(eq_fun = function(x, y){all.equal(sum(!is.na(x)), sum(!is.na(x)))})
-ex() %>% check_code("<- samp_mean + 1.96 * samp_sd / sqrt(60)")
+ex() %>% check_code("<- samp_mean + 1.96 * samp_sd / sqrt(60)", fixed = TRUE)
 success_msg("So many confidence intervals! Did you notice how many of them did not include the population mean?")
 ```
