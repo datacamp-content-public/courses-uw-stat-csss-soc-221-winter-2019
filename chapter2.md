@@ -122,12 +122,12 @@ mean(sample1)
 # Draw another sample
 sample2 <- sample(ames$Gr.Liv.Area, 50)
 # Print the mean living area in that sample
-mean(sample2, 50)
+mean(sample2)
 
 # Draw a third sample
 sample3 <- sample(ames$Gr.Liv.Area, 50)
 # Print the mean living area in that sample
-mean(sample3, 50)
+mean(sample3)
 ```
 
 `@sct`
@@ -281,8 +281,8 @@ hist(sample_means500)
 `@sct`
 ```{r}
 ex() %>% check_object("sample_means500") %>% check_equal(eq_fun = function(x, y){all.equal(sum(!is.na(x)), sum(!is.na(x)))})
-ex %>% check_code("hist(sample_means50, xlim = xlimits)", fixed = TRUE)
-ex %>% check_code("hist(sample_means500, xlim = xlimits)", fixed = TRUE)
+ex() %>% check_code("hist(sample_means50, xlim = xlimits)", fixed = TRUE)
+ex() %>% check_code("hist(sample_means500, xlim = xlimits)", fixed = TRUE)
 success_msg("Great job! You should have noticed that the two distributions had a similar center but different spread.")
 ```
 
