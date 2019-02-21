@@ -61,7 +61,8 @@ summary(ames)
 
 `@sct`
 ```{r}
-
+ex() %>% check_code("summary(ames)", fixed = TRUE)
+success_msg("Exploring new datasets is one of the most fun parts of analysis.  What did you notice when you looked at all the variables in the Ames housing data?")
 ```
 
 ---
