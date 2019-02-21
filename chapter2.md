@@ -227,7 +227,7 @@ Run the code to loop over 5000 samples of 100 houses each, which will be saved i
 Generate two histograms, one for each sampling distribution (`sample_means50` and `sample_means500`, using the `hist()` function.  Before plotting the histograms run the two lines of code that set options for how the histograms are displayed
 
 `@hint`
-Have you made sure to put the name of the `sample_means100` object inside the second histogram command?
+Have you made sure to put the name of the `sample_means500` object inside the second histogram command?
 
 `@pre_exercise_code`
 ```{r}
@@ -299,17 +299,17 @@ xp: 50
 In the previous exercise you generated two sampling distributions.  Which of the following were NOT features of the distributions you plotted?
 
 `@hint`
-
+The law of large numbers might help you think about this one!
 
 `@possible_answers`
 - The smaller sample size had a wider spread than the larger sample size.
-- [The center of the two distributions was approximately the same.]
-- The larger sample size had more variability in its sampling distribution
+- The center of the two distributions was approximately the same.
+- [The larger sample size had more variability in its sampling distribution]
 
 `@feedback`
 - Try again!
-- Great job!
 - Try again!
+- Great job!
 
 ---
 
