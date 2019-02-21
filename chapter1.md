@@ -73,6 +73,7 @@ plot(cars, type = "o", col = "blue")
 
 `@sct`
 ```{r}
+ex() %>% check_code("plot", fixed = TRUE)
 success_msg("Great! Now let's get started")
 ```
 
