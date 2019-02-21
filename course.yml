@@ -1,4 +1,4 @@
-title: "UW Stat/CSSS/Soc 221 Winter 2019"
+title: "UW Stat-CSSS-Soc 221 Winter 2019"
 description: "This course provides basic hands-on lab experience applying basic statistical concepts for an introductory social science statistics class at the University of Washington. \n\nThe course is intended to provide basic exposure to statistical programming as a basic illustration of the tools analysts use to do applied statistics in practice.  It is not intended to provide either a comprehensive orientation to the R programming language or a stand-alone introduction to statistics or inference."
 programming_language: "r"
 from: "r-base-prod:v1.0.2"

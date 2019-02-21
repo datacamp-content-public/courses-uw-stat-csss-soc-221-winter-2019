@@ -3,21 +3,29 @@ title: 'Lab 3: Hypothesis tests and linear regression'
 description: ""
 ---
 
-## Load data and explore variables
+## Explore: Load data and compare variables
 
 ```yaml
 type: NormalExercise
-key: c26e834df3
+key: 13462cb399
 xp: 100
 ```
 
+This chapter is intended to give a quick tour of hypothesis testing - both for means and for regression coefficients.
 
+We will start by simply loading some data and exploring the variables included.
+
+In 2004, the state of North Carolina released a large data set containing information on births recorded in this state. This data set is useful to researchers studying the relation between habits and practices of expectant mothers and the birth of their children.  For our exercises, we will work with a random sample of observations from this data set.
 
 `@instructions`
+Load the dataset from the url specified, using provided code.  This will create a dataframe object (our sample) called `nc` that you can explore.
 
+Look at summary statistics for all the variables in the dataset using the `summary()` function. How many variables are included in this dataset?
+
+Use the `by()` function to calculate the mean of `weight`, split by `habit` (mother's smoking habit).  The `by()` function lets us use one function on different subsets of our data set.
 
 `@hint`
-
+Put the name of the dataframe (nc) in the summary command!
 
 `@pre_exercise_code`
 ```{r}
@@ -26,336 +34,30 @@ xp: 100
 
 `@sample_code`
 ```{r}
+# Load data
+load(url("http://www.openintro.org/stat/data/nc.RData"))
 
+# Use summary() to explore variables
+summary(___)
+
+# Use by() to calculate the mean birth weight, by mom's smoking habit
+by(nc$weight, nc$habit, mean)
 ```
 
 `@solution`
 ```{r}
+# Load data
+load(url("http://www.openintro.org/stat/data/nc.RData"))
 
+# Use summary() to explore variables
+summary(nc)
+
+# Use by() to calculate the mean birth weight, by mom's smoking habit
+by(nc$weight, nc$habit, mean)
 ```
 
 `@sct`
 ```{r}
-
-```
-
----
-
-## Inference: Hypothesis test - different from zero?
-
-```yaml
-type: NormalExercise
-key: bf4f7aae25
-xp: 100
-```
-
-
-
-`@instructions`
-
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{r}
-
-```
-
-`@sample_code`
-```{r}
-
-```
-
-`@solution`
-```{r}
-
-```
-
-`@sct`
-```{r}
-
-```
-
----
-
-## Inference: Hypothesis tests - different from another value?
-
-```yaml
-type: NormalExercise
-key: 260d2e07f9
-xp: 100
-```
-
-
-
-`@instructions`
-
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{r}
-
-```
-
-`@sample_code`
-```{r}
-
-```
-
-`@solution`
-```{r}
-
-```
-
-`@sct`
-```{r}
-
-```
-
----
-
-## Inference: Hypothesis tests with confidence intervals
-
-```yaml
-type: NormalExercise
-key: cfebb38459
-xp: 100
-```
-
-
-
-`@instructions`
-
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{r}
-
-```
-
-`@sample_code`
-```{r}
-
-```
-
-`@solution`
-```{r}
-
-```
-
-`@sct`
-```{r}
-
-```
-
----
-
-## Inference: Hypothesis tests comparing two means
-
-```yaml
-type: NormalExercise
-key: c8831f4269
-xp: 100
-```
-
-
-
-`@instructions`
-
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{r}
-
-```
-
-`@sample_code`
-```{r}
-
-```
-
-`@solution`
-```{r}
-
-```
-
-`@sct`
-```{r}
-
-```
-
----
-
-## Inference: Interpreting hypothesis tests
-
-```yaml
-type: PureMultipleChoiceExercise
-key: 55f0992347
-xp: 50
-```
-
-What is the best interpretation of the statement "we reject the null hypothesis"?
-
-`@hint`
-
-
-`@possible_answers`
-- We have proved that our alternative hypothesis  is true.
-- We do not have enough evidence to be confident in our alternative hypothesis.
-- [In only one out of every 20 samples would we expect to see a difference in sample means this large if there was not a real difference in the population]
-
-`@feedback`
-- Try again!
-- Try again!
-- Great job!
-
----
-
-## Exploring data: fitting a linear model
-
-```yaml
-type: NormalExercise
-key: 19e6ade5ed
-xp: 100
-```
-
-
-
-`@instructions`
-
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{r}
-
-```
-
-`@sample_code`
-```{r}
-
-```
-
-`@solution`
-```{r}
-
-```
-
-`@sct`
-```{r}
-
-```
-
----
-
-## Inference: Hypothesis tests of regression coefficients
-
-```yaml
-type: NormalExercise
-key: 49bbb411ea
-xp: 100
-```
-
-
-
-`@instructions`
-
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{r}
-
-```
-
-`@sample_code`
-```{r}
-
-```
-
-`@solution`
-```{r}
-
-```
-
-`@sct`
-```{r}
-
-```
-
----
-
-## Inference: Interpreting coefficient significance
-
-```yaml
-type: MultipleChoiceExercise
-key: 4bb5ce050d
-xp: 50
-```
-
-What is the best interpretation of a p-value of a regression coefficient that is smaller than 0.05?
-
-`@possible_answers`
-- A small p-value means we can be 95% confident that x causes y.
-- A small p-value means that the explanatory variable has a large effect on the response.
-- [A small p-value means we would be surprised to see an in-sample relationship this strong if the variables were independent in the population.]
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{r}
-
-```
-
-`@sct`
-```{r}
-
-```
-
----
-
-## Inference: Multivariate regression
-
-```yaml
-type: NormalExercise
-key: fad0385b68
-xp: 100
-```
-
-
-
-`@instructions`
-
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{r}
-
-```
-
-`@sample_code`
-```{r}
-
-```
-
-`@solution`
-```{r}
-
-```
-
-`@sct`
-```{r}
-
+ex() %>% check_code("summary(nc)", fixed = TRUE)
+success_msg("Good start! Now, to figure out whether that's a statistically significant difference between those means!")
 ```

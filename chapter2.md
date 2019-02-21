@@ -23,7 +23,7 @@ Load the data with the `load()` function using the url "http://www.openintro.org
 Explore the different variable types in `ames` using the `summary()` function.  Which variables appear to be continuous and which discrete?
 
 `@hint`
-
+Put the name of the ames dataframe in the `summary()` function.
 
 `@pre_exercise_code`
 ```{r}
@@ -61,7 +61,8 @@ summary(ames)
 
 `@sct`
 ```{r}
-
+ex() %>% check_code("summary(ames)", fixed = TRUE)
+success_msg("Exploring new datasets is one of the most fun parts of analysis.  What did you notice when you looked at all the variables in the Ames housing data?")
 ```
 
 ---
@@ -81,12 +82,12 @@ We can create random samples from the population all houses in Ames using the `s
 In this exercise, we will draw several samples of the living area of 50 houses in Ames and compare their estimated mean area.
 
 `@instructions`
-The ames dataset is already loaded.  Using the `sample()` function, draw three samples from the full population of houses' living areas in Ames.  
+The `ames` dataset is already loaded.  Using the `sample()` function, draw three samples from the full population of houses' living areas in Ames.  
 
 Examine the mean living area estimate from each sample.  How variable are these estimates of the mean?
 
 `@hint`
-
+Repeat for sample 3 what the code does for sample 1 and 2.
 
 `@pre_exercise_code`
 ```{r}
@@ -95,8 +96,6 @@ load(url("http://www.openintro.org/stat/data/ames.RData"))
 
 `@sample_code`
 ```{r}
-# The ames data set is already loaded.
-
 # Draw one sample
 sample1 <- sample(ames$Gr.Liv.Area, 50)
 # Print the mean living area in that sample
@@ -111,13 +110,10 @@ mean(sample2)
 sample3 <- sample(___, __)
 # Print the mean living area in that sample
 mean(___)
-
 ```
 
 `@solution`
 ```{r}
-# The ames data set is already loaded.
-
 # Draw one sample
 sample1 <- sample(ames$Gr.Liv.Area, 50)
 # Print the mean living area in that sample
@@ -126,19 +122,19 @@ mean(sample1)
 # Draw another sample
 sample2 <- sample(ames$Gr.Liv.Area, 50)
 # Print the mean living area in that sample
-mean(sample2, 50)
+mean(sample2)
 
 # Draw a third sample
 sample3 <- sample(ames$Gr.Liv.Area, 50)
 # Print the mean living area in that sample
-mean(sample3, 50)
-
-
+mean(sample3)
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_code("sample(ames$Gr.Liv.Area, 50)", fixed = TRUE, times = 3)
+ex() %>% check_code("mean(sample3)", fixed = TRUE)
+success_msg("Nice job! Were each of the sample means the same, or different?")
 ```
 
 ---
@@ -163,7 +159,7 @@ Run the loop code to generate the R object `sample_means50` that contains all th
 Generate the histogram of the means of the 5000 samples of 50 houses each.
 
 `@hint`
-
+You shouldn't have to change this code - just run it and see what it does!
 
 `@pre_exercise_code`
 ```{r}
@@ -202,7 +198,9 @@ hist(sample_means50)
 
 `@sct`
 ```{r}
-
+ex() %>% check_object("sample_means50") %>% check_equal(eq_fun = function(x, y){all.equal(sum(!is.na(x)), sum(!is.na(x)))})
+ex() %>% check_code("hist(sample_means50)", fixed = TRUE)
+success_msg("Now you've seen an example of one sampling distribution, for sample size n = 50")
 ```
 
 ---
@@ -229,7 +227,7 @@ Run the code to loop over 5000 samples of 100 houses each, which will be saved i
 Generate two histograms, one for each sampling distribution (`sample_means50` and `sample_means500`, using the `hist()` function.  Before plotting the histograms run the two lines of code that set options for how the histograms are displayed
 
 `@hint`
-Have you made sure to put the name of the `sample_means100` object inside the second histogram command?
+Have you made sure to put the name of the `sample_means500` object inside the second histogram command?
 
 `@pre_exercise_code`
 ```{r}
@@ -251,12 +249,13 @@ for(i in 1:5000){
    sample_means500[i] <- mean(samp)
    }
 
-# code to let us put two plots on top of each other
-par(mfrow = c(2, 1))
-# code to make the x-axis of the plots consistent so we can compare
-xlimits <- range(sample_means50)
+# Options for drawing the histogram:
+par(mfrow = c(2, 1)) #code to let us put two plots on top of each other
+xlimits <- range(sample_means50) # code to make the x-axis of the plots match
 
+# code to plot the n=50 samples
 hist(sample_means50, xlim = xlimits)
+# code to plot the n=500 samples
 hist(___, xlim = xlimits)
 ```
 
@@ -269,18 +268,22 @@ for(i in 1:5000){
    sample_means500[i] <- mean(samp)
    }
 
-# code to let us put two plots on top of each other
-par(mfrow = c(2, 1))
-# code to make the x-axis of the plots consistent so we can compare
-xlimits <- range(sample_means50)
+# Options for drawing the histogram:
+par(mfrow = c(2, 1)) #code to let us put two plots on top of each other
+xlimits <- range(sample_means50) # code to make the x-axis of the plots match
 
-hist(sample_means50)
-hist(sample_means500)
+# code to plot the n=50 samples
+hist(sample_means50, xlim = xlimits)
+# code to plot the n=500 samples
+hist(sample_means500, xlim = xlimits)
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_object("sample_means500") %>% check_equal(eq_fun = function(x, y){all.equal(sum(!is.na(x)), sum(!is.na(x)))})
+ex() %>% check_code("hist(sample_means50, xlim = xlimits)", fixed = TRUE)
+ex() %>% check_code("hist(sample_means500, xlim = xlimits)", fixed = TRUE)
+success_msg("Great job! You should have noticed that the two distributions had a similar center but different spread.")
 ```
 
 ---
@@ -296,17 +299,17 @@ xp: 50
 In the previous exercise you generated two sampling distributions.  Which of the following were NOT features of the distributions you plotted?
 
 `@hint`
-
+The law of large numbers might help you think about this one!
 
 `@possible_answers`
 - The smaller sample size had a wider spread than the larger sample size.
-- [The center of the two distributions was approximately the same.]
-- The larger sample size had more variability in its sampling distribution
+- The center of the two distributions was approximately the same.
+- [The larger sample size had more variability in its sampling distribution]
 
 `@feedback`
 - Try again!
-- Great job!
 - Try again!
+- Great job!
 
 ---
 
@@ -330,7 +333,7 @@ The ames dataframe is already loaded.  As we did in previou exercise, draw a sam
 Next, calculate the mean and standard deviation of the living area sample and save these statistics to sensibly named objects.
 
 `@hint`
-
+You can create the upper confidence limit just like you did the lower: just make sure to switch the (-) to a (+)!
 
 `@pre_exercise_code`
 ```{r}
@@ -342,13 +345,13 @@ load(url("http://www.openintro.org/stat/data/ames.RData"))
 # The ames dataframe is already loaded 
 
 # Draw a sample of living areas for 60 houses from the population
-area_sample <- sample(ames$Gr.Liv.Area, 60)
+area_sample <- sample(ames$Gr.Liv.Area, ___)
 
 # Calculate and save the mean living area in the sample
 mean_area <- mean(area_sample)
 
 # Calculate and save the standard deviation of the sample of living areas
-sd_area <- sd(area_sample)
+sd_area <- sd(___)
 ```
 
 `@solution`
@@ -367,7 +370,12 @@ sd_area <- sd(area_sample)
 
 `@sct`
 ```{r}
-
+ex() %>% check_function("sample") %>%{
+  check_arg(., "x") %>% check_equal()
+  check_arg(., "size") %>% check_equal()
+}
+ex() %>% check_function("sd") %>% check_arg("x") %>%check_equal(eval = FALSE, incorrect_msg="Did you calculate the standard deviation of the area sample?")
+success_msg("Nice job. Next we'll use that mean and standard deviation to construct confidence intervals.")
 ```
 
 ---
@@ -389,11 +397,11 @@ In this exercise, we will use the sample mean and standard deviation to calculat
 We will also check whether our sample is one of the 95% of samples that we expect to contain the population parameter.
 
 `@instructions`
-Calculate the standard error of the estimate, using the equation for standand error: the standard deviation divided by the square root of the sample size.  The R function `sqrt()` calculates square roots!
+Calculate the standard error of the estimate: the standard deviation divided by the square root (function `sqrt()`) of the sample size.
 
 Calculate the lower and upper limits of the 95% confidence interval.  Remember, the 95% confidence interval is defined by 1.96 standard errors above and below the estimated mean.  
 
-Finally, calculate the population mean to check whether it falls within your confidence interval.
+Finally, calculate the population mean (from the variable `ames$Gr.Liv.Area`) to check whether it falls within your confidence interval.
 
 `@hint`
 
@@ -426,8 +434,8 @@ upper <- ___ _ 1.96 * ___
 print(lower)
 print(upper)
 
-# Calculate and print the population mean
-mean(ames$Gr.Liv.Area)
+# Print the population mean.  Is in the C.I.?
+mean(___$___)
 ```
 
 `@solution`
@@ -445,13 +453,16 @@ upper <- mean_area + 1.96 * se
 print(lower)
 print(upper)
 
-# Calculate and print the population mean
+# Print the population mean.  Is in the C.I.?
 mean(ames$Gr.Liv.Area)
 ```
 
 `@sct`
 ```{r}
-
+ex() %>%check_code("<- mean_area + 1.96 * se", fixed = TRUE)
+ex() %>%check_code("print(lower)", fixed  = TRUE)
+ex() %>% check_output_expr("mean(ames$Gr.Liv.Area)")
+success_msg("You've made a confidence interval!  Was yours one of the 95% of samples we expect to include the population parameter?")
 ```
 
 ---
@@ -467,7 +478,7 @@ xp: 50
 What is the best interpretation of the 95% confidence you calculated?
 
 `@hint`
-
+Remember, we don't actually know the true population distribution, so can't calculate a probability of the true mean falling in a certain range!
 
 `@possible_answers`
 - There is a 95% probability that the true population value is within the confidence interval range
@@ -498,12 +509,12 @@ Once we have drawn our 50 samples, we will calculate the confidence interval aro
 `@instructions`
 Run the loop code to draw 50 samples of 60 houses and save the 50 sample means and standard deviations.
 
-Calculate the upper and lower bounds of the confidence intervals for each sample, saving the collected upper and lower bounds in objects called `upper_bounds` and `lower_bounds`.
+Calculate the upper and lower bounds of the confidence intervals for each sample (sample size = 60), saving the upper and lower limits in objects `upper_bounds` and `lower_bounds`.
 
 Run the `plot_ci()` function to generate a plot of all the confidence intervals, a line showing the population mean, and highlighting of intervals that do not contain the population mean.
 
 `@hint`
-
+You can create the upper confidence intervals just like you did the lower: just make sure to switch the (-) to a (+)!
 
 `@pre_exercise_code`
 ```{r}
@@ -530,7 +541,6 @@ plot_ci(lower_vector, upper_vector, mean(ames$Gr.Liv.Area))
 
 `@solution`
 ```{r}
-
 # Loop function to calculate the sample means and sds for 50 samples of 60 houses each:
 samp_mean <- rep(NA, 50)
 samp_sd <- rep(NA, 50)
@@ -545,10 +555,11 @@ lower_vector <- samp_mean - 1.96 * samp_sd / sqrt(60)
 upper_vector <- samp_mean + 1.96 * samp_sd / sqrt(60) 
 
 #plot_ci(lower_vector, upper_vector, mean(ames$Gr.Liv.Area))
-
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_object("samp_sd") %>% check_equal(eq_fun = function(x, y){all.equal(sum(!is.na(x)), sum(!is.na(x)))})
+ex() %>% check_code("<- samp_mean + 1.96 * samp_sd / sqrt(60)", fixed = TRUE)
+success_msg("So many confidence intervals! Did you notice how many of them did not include the population mean?")
 ```
