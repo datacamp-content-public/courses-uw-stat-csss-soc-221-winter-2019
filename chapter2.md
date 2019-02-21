@@ -23,7 +23,7 @@ Load the data with the `load()` function using the url "http://www.openintro.org
 Explore the different variable types in `ames` using the `summary()` function.  Which variables appear to be continuous and which discrete?
 
 `@hint`
-
+Put the name of the ames dataframe in the `summary()` function.
 
 `@pre_exercise_code`
 ```{r}
@@ -87,7 +87,7 @@ The `ames` dataset is already loaded.  Using the `sample()` function, draw three
 Examine the mean living area estimate from each sample.  How variable are these estimates of the mean?
 
 `@hint`
-
+Repeat for sample 3 what the code does for sample 1 and 2.
 
 `@pre_exercise_code`
 ```{r}
@@ -159,7 +159,7 @@ Run the loop code to generate the R object `sample_means50` that contains all th
 Generate the histogram of the means of the 5000 samples of 50 houses each.
 
 `@hint`
-
+You shouldn't have to change this code - just run it and see what it does!
 
 `@pre_exercise_code`
 ```{r}
@@ -333,7 +333,7 @@ The ames dataframe is already loaded.  As we did in previou exercise, draw a sam
 Next, calculate the mean and standard deviation of the living area sample and save these statistics to sensibly named objects.
 
 `@hint`
-
+You can create the upper confidence limit just like you did the lower: just make sure to switch the (-) to a (+)!
 
 `@pre_exercise_code`
 ```{r}
@@ -514,7 +514,7 @@ Calculate the upper and lower bounds of the confidence intervals for each sample
 Run the `plot_ci()` function to generate a plot of all the confidence intervals, a line showing the population mean, and highlighting of intervals that do not contain the population mean.
 
 `@hint`
-
+You can create the upper confidence intervals just like you did the lower: just make sure to switch the (-) to a (+)!
 
 `@pre_exercise_code`
 ```{r}
